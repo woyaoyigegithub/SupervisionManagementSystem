@@ -1,0 +1,148 @@
+/*页面通用设置*/
+* { margin: 0; padding: 0; }
+html,body { height: 100%; }
+h1,h2,h3 {
+	text-align: center;
+	line-height: 50px;
+}
+input[type='button'] {
+	padding: 1px 6px;
+}
+
+/* ===查询数据区域样式=== */
+
+/*（查询数据区域）中的高级搜索区标题样式*/
+.queryDataArea>div>h3 {
+	line-height: 30px;
+}
+
+/*（查询数据区域）中高级搜索区整体框架样式*/
+.queryDataArea .advancedSearch {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+	padding-bottom: 10px;
+	border-bottom: 2px solid #b5b982;
+}
+
+/*（查询数据区域）中{高级搜索区}的列表样式*/
+.queryDataArea .advancedSearch>li {
+	list-style: none;
+}
+
+/*（查询数据区域）中数据表格样式 */
+.queryDataArea>.dataTab td {
+	text-align: center;
+	padding: 0 8px;
+}
+
+/*（查询数据区域）中{数据表格的编辑图片和删除图片}小方格样式*/
+.queryDataArea>.dataTab tr:not(:last-child) td:last-child {
+	min-width: 40px;
+}
+/*（查询数据区域）中数据表格的{编辑图片}和{删除图片}样式 */
+.queryDataArea>.dataTab td>img:nth-child(2) {
+	margin-left: 5px;
+}
+
+
+
+
+/*（插入数据区）和（查询数据区域）标题下方分隔线*/
+.queryDataArea>h2,
+.updateDataArea>h2 {
+	border-bottom: 2px solid #b5b982;
+}
+
+/*（插入数据区）和（查询数据区）数据表格整体样式*/
+.queryDataArea>.dataTab,
+.updateDataArea>.dataTab {
+	border-collapse: collapse;
+	margin: 10px auto;
+}
+
+/*（插入数据区）和（查询数据区）数据表格中的小方格样式*/
+.queryDataArea>.dataTab td {
+	border: 1px solid black;
+	height: 27px;
+	word-break: keep-all;
+	text-align: center;
+}
+
+.updateDataArea>.dataTab tr:not(:last-child) td {
+	border: 1px solid black;
+	max-width: 300px;
+	height: 27px;
+	word-break: keep-all;
+	text-align: center;
+}
+
+
+
+
+/*(插入数据区域)<input>标签样式*/
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='id'] {
+	width: 200px;
+}
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='courseSelectionId'] {
+	width: 250px;
+}
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='supervisorId']{
+	width: 200px;
+}
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='teachingSection'] {
+	width: 200px;
+}
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='classId'] {
+	width: 200px;
+}
+
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='numOfClass'],
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='actualNum'],
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='lateNum'],
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='leavingEarlyNum'] {
+	width: 50px;
+}
+
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='weekly'],
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='jieci'] {
+	width: 35px;
+}
+
+.updateDataArea>.dataTab tr:not(:last-child) td>input[class='evaluationScore'] {
+	width: 40px;
+}
+
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='totalScore']{
+	width: 40px;
+}
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='evaluationLevel'] {
+	width: 20px;
+}
+
+.updateDataArea>.dataTab tr:not(:last-child) td>input,
+.updateDataArea>.dataTab tr:not(:last-child) td>select {
+	height: 20px;
+}
+
+
+/*操作区样式*/
+.updateDataArea {
+	display: none;
+}
+.updateDataArea>.dataTab tr:last-child td {
+	text-align: center;
+}
+
+.updateDataArea>.dataTab tr:last-child td>input[id='clearBtn'] {
+	margin-left: 20px;
+}
+
+/*消息*/
+.message {
+	text-align:center;
+	color: #b7b70e;
+}
+
+

@@ -1,0 +1,22 @@
+.insertDataArea>.dataTab,.queryDataArea>.dataTab,.updateDataArea>.dataTab {
+	text-align: center;
+}
+
+.insertDataArea>.dataTab td,.queryDataArea>.dataTab td,.updateDataArea>.dataTab td {
+	text-align: center;
+}
+
+
+/*(插入数据区域)<input>标签样式*/
+.insertDataArea>.dataTab input[name='id'],
+.updateDataArea>.dataTab input[name='id'] {
+	width: 70px;
+}
+.insertDataArea>.dataTab input[name='studentId'],
+.updateDataArea>.dataTab input[name='studentId'] {
+	width: 120px;
+}
+.insertDataArea>.dataTab input[name='consultTeacherId'],
+.updateDataArea>.dataTab input[name='consultTeacherId'] {
+	width: 120px;
+}
