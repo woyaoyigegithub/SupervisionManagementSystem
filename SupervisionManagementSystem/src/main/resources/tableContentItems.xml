@@ -26,9 +26,10 @@
     </resource> 
   </entity>  
   <school-year> 
-    <items value="2017-2018"/>  
     <items value="2018-2019"/>  
     <items value="2019-2020"/>
+    <items value="2020-2021"/>
+    <items value="2021-2022"/>
   </school-year>  
   <records> 
     <record name="attendedLectures"> 

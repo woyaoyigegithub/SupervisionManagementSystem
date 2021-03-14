@@ -78,7 +78,7 @@ public class TimerTaskListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent sce) {
 		//调用时执行一次，以后每次元旦执行一次
 		createNewYear0();
-		createNewSchoolYearTimer();
+//		createNewSchoolYearTimer();
 	}
 
 	@Override
