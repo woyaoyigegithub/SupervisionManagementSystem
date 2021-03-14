@@ -1,0 +1,40 @@
+.insertDataArea>.dataTab,.queryDataArea>.dataTab,.updateDataArea>.dataTab {
+	text-align: center;
+}
+
+.insertDataArea>.dataTab tr:first-child td,
+.queryDataArea>.dataTab tr:first-child td {
+	padding: 0 10px;
+}
+
+
+/*控件长度设置*/
+.insertDataArea>.dataTab input[name='id'],
+.updateDataArea>.dataTab input[name='id'] {
+	width: 100px;
+}
+.insertDataArea>.dataTab input[name='startingAndEndingWeeks'],
+.updateDataArea>.dataTab input[name='startingAndEndingWeeks'] {
+	width: 70px;
+}
+.insertDataArea>.dataTab input[name='inspectionAreaArrangementBuildingId'],
+.updateDataArea>.dataTab input[name='inspectionAreaArrangementBuildingId'] {
+	width: 100px;
+}
+.insertDataArea>.dataTab input[name='publicationTime'],
+.updateDataArea>.dataTab input[name='publicationTime'] {
+	width: 120px;
+}
+.insertDataArea>.dataTab input[name='inspectionAreaArrangementSituationId'],
+.updateDataArea>.dataTab input[name='inspectionAreaArrangementSituationId'] {
+	width: 100px;
+}
+.insertDataArea>.dataTab input[name='inspectorsNum'],
+.updateDataArea>.dataTab input[name='inspectorsNum'] {
+	width: 35px;
+}
+.insertDataArea>.dataTab input[name='supervisorId'],
+.updateDataArea>.dataTab input[name='supervisorId'] {
+	width: 90px;
+}
+

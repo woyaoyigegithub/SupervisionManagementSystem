@@ -1,0 +1,5 @@
+/*（插入数据区）和（查询数据区）数据表格中的小方格样式*/
+.insertDataArea>.dataTab,.updateDataArea>.dataTab {
+	text-align: center;
+}
+

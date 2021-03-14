@@ -1,0 +1,30 @@
+.insertDataArea>.dataTab,.queryDataArea>.dataTab,.updateDataArea>.dataTab {
+	text-align: center;
+}
+
+/*插入数据区、和查询数据区和更新数据区首行数据内边距样式*/
+.insertDataArea>.dataTab tr:first-child td,
+.queryDataArea>.dataTab tr:first-child td,
+.updateDataArea>.dataTab tr:first-child td {
+	padding: 0 10px;
+}
+
+
+
+/*(插入数据区域)<input>标签样式*/
+.insertDataArea>.dataTab input[name='id'],
+.updateDataArea>.dataTab input[name='id'] {
+	width: 100px;
+}
+.insertDataArea>.dataTab input[name='inspectionAreaArrangementSituationId'],
+.updateDataArea>.dataTab input[name='inspectionAreaArrangementSituationId'] {
+	width: 100px;
+}
+.insertDataArea>.dataTab input[name='weekly'],
+.updateDataArea>.dataTab input[name='weekly'] {
+	width: 100px;
+}
+.insertDataArea>.dataTab input[name='date'],
+.updateDataArea>.dataTab input[name='date'] {
+	width: 120px;
+}

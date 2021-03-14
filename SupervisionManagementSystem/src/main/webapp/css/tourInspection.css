@@ -1,0 +1,20 @@
+.insertDataArea>.dataTab,.queryDataArea>.dataTab,.updateDataArea>.dataTab {
+	text-align: center;
+}
+
+/*插入数据区、和查询数据区和更新数据区首行数据内边距样式*/
+.insertDataArea>.dataTab tr:first-child td,
+.queryDataArea>.dataTab tr:first-child td,
+.updateDataArea>.dataTab tr:first-child td {
+	padding: 0 10px;
+}
+
+.insertDataArea>.dataTab tr:not(:last-child) td>input[name='startingTime'],
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='startingTime'] {
+	width: 50px;
+}
+.insertDataArea>.dataTab tr:not(:last-child) td>input[name='endingTime'],
+.updateDataArea>.dataTab tr:not(:last-child) td>input[name='endingTime'] {
+	width: 50px;
+}
+
