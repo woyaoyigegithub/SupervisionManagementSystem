@@ -53,11 +53,11 @@ $(document).ready(function(){
 	}else if(sayHelloText2){
 		text=sayHelloText2.innerText;
 	}
-	getStaffId=()=>{
+	getStaffId=function(){
 		return text.slice(text.indexOf("：")+1,text.indexOf("("));	//获取职工id
 	}
 
-	getIdentity=()=>{
+	getIdentity=function(){
 		return text.slice(text.indexOf("【")+1,text.indexOf("："));	//获取当前身份
 	}
 });
