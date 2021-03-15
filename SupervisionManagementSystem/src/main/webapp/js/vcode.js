@@ -27,7 +27,7 @@ function ranColor(min, max) {
 	var r = ranNum(min, max);
 	var g = ranNum(min, max);
 	var b = ranNum(min, max);
-	return `rgb(${r},${g},${b})`;
+	return "rgb("+r+","+g+","+b+")";
 }
 
  

@@ -43,7 +43,7 @@ function getDate(){
 var getStaffId;
 var getIdentity;
 
-$(document).ready(()=>{
+$(document).ready(function(){
 	//获取职工id和身份
 	var sayHelloText1=document.querySelector(".say_hello_text");
 	var sayHelloText2=window.parent.document.querySelector(".say_hello_text");
