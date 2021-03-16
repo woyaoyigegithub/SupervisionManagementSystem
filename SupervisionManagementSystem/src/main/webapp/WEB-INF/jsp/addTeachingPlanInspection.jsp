@@ -20,7 +20,8 @@
 	<!-- 数据表格 -->
 	<table class="dataTab">
 		<tr>
-			<td colspan="4" class="essential">选课编号：<input type="text" name="courseSelectionId" min="0" value="${courseSelectionId}"></td>
+			<td colspan="4" class="essential">选课编号：<input type="text" name="courseSelectionId" placeholder="(2020-2021-1)-0010000001-0000558-1" min="0" value="${courseSelectionId}">
+			<input type="button" id="queryCourseSelectionBtn" value="查询"></td>
 			
 		</tr>
 		<tr>

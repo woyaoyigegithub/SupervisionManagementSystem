@@ -13,6 +13,8 @@ var dataTab;
 
 //插入数据区域中的各个<input>标签
 var courseSelectionIdInput,discussingAndAffirmingTextarea,situationSelectList;
+//查询选课的button
+var queryCourseSelectionBtn;
 //定位到教案检查指标项编号那一行
  var teachingPlanInspectionItemsIdTr;
 //错误消息
@@ -105,6 +107,7 @@ function initComponentStatus(flag){
 	if(!flag){
 		//选课编号可用，其余控件不可用状态
 		courseSelectionIdInput.attr("disabled",false);
+		queryCourseSelectionBtn.show();
 		discussingAndAffirmingTextarea.attr("disabled",true);
 		insertBtn.attr("disabled",true);
 		clearBtn.attr("disabled",true);
@@ -113,6 +116,7 @@ function initComponentStatus(flag){
 	//初始成功
 	//optionsTextareaList初始化，并解除控件禁用状态
 	courseSelectionIdInput.attr("disabled",true);
+	queryCourseSelectionBtn.hide();
  	situationSelectList=dataTab.find("select[name='situation']");
  	discussingAndAffirmingTextarea.attr("disabled",false);
 	insertBtn.attr("disabled",false);
@@ -141,8 +145,8 @@ function addTeachingPlanInspectionSituationListHtml(teachingPlanInspectionItemsL
 		nextTr=nextTr.next();
  	}
  	
- 	//进行成功的初始化
- 	initComponentStatus(true);
+ 	//初始化选项输入框列表
+ 	situationSelectList=dataTab.find("select[name='situation']");
  	
     //test数据
 //    situationSelectList.each(function(index){
@@ -180,6 +184,8 @@ function tryGetCourseSelectionIdByInquiry(){
 			courseSelectionIdInput.val(courseSelectionId);
 			courseSelectionIdInput.attr("disabled",true);
 			
+			//进行成功的初始化
+		 	initComponentStatus(true);
 			//发起获取听课项列表请求，并刷新网页
 			$.ajax("queryTeachingPlanInspectionItemsList",{type:"post",data:{type:courseSelection.course.type},
 				success:addTeachingPlanInspectionSituationListHtml,error:(xhr)=>alert(xhr.responseText)});
@@ -197,7 +203,10 @@ $(document).ready(function(){
 	dataTab=$(".dataTab");
 	
 	courseSelectionIdInput=dataTab.find("input[name='courseSelectionId']");
+	situationSelectList=dataTab.find("select[name='situation']");
 	discussingAndAffirmingTextarea=dataTab.find("textarea[name='discussingAndAffirming']");
+	
+	queryCourseSelectionBtn=$("#queryCourseSelectionBtn");
 	
 	//test数据
 //	discussingAndAffirmingTextarea.val("教案制作精美");
@@ -213,10 +222,12 @@ $(document).ready(function(){
 	
 	//网页打开时输入选课编号到后端检验，正确则输入到输入框中
 	if(courseSelectionIdInput.val()==""){ tryGetCourseSelectionIdByInquiry(); }
-	else{ initComponentStatus(true); }
+	else{ 
+		initComponentStatus(true);
+	}
 
 	
-	courseSelectionIdInput.blur(function(){
+	queryCourseSelectionBtn.click(function(){
 		var vCourseSelectionId=/^\(\d{4}-\d{4}-\d\)-\d{10}-\d{7}-\d{1,2}$/;
 		var courseSelectionId=courseSelectionIdInput.val();
 		//判断选课编号是否为空
@@ -229,6 +240,7 @@ $(document).ready(function(){
 			alert("选课编号不规范");
 			return;
 		}
+		
 		//后端检验输入框中的选课编号，若存在，则获取教案检查项列表添加到教案检查信息的列表中，不存在，则显示错误信息
 		$.ajax({
 			url:"queryCourseSelectionById",
@@ -245,7 +257,7 @@ $(document).ready(function(){
 				}
 				//存在该选课
 				courseSelectionIdInput.val(courseSelectionId);
-				
+				initComponentStatus(true);
 				//发起获取听课项列表请求，并刷新网页
 				$.ajax("queryTeachingPlanInspectionItemsList",{type:"post",async:false,data:{type:courseSelection.course.type},
 					success:addTeachingPlanInspectionSituationListHtml,error:(xhr)=>alert(xhr.responseText)});

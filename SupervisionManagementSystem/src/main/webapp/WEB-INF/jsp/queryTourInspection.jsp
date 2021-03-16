@@ -27,8 +27,9 @@
 			<li>起时：<input type="number" name="startingTime" min="0"></li>
 			<li>终时：<input type="number" name="endingTime" min="0"></li>
 			<li>巡考区域：<input type="text" name="tourInspectionArea"></li>
-			<c:if test="${'督导'!=staff.power.name}"><li>督导工号：<input type="number" name="supervisorId" min="0"></li></c:if>
-			<li><input type="button" id="searchBtn" value="搜索"><input type="button" id="batchDeleteBtn" value="批量删除"></li>
+			<c:if test="${staff.power.name=='管理员'}"><li>督导工号：<input type="number" name="supervisorId" min="0"></li></c:if>
+			<li><input type="button" id="searchBtn" value="搜索">
+			<c:if test="${staff.power.name=='管理员'}"><input type="button" id="batchDeleteBtn" value="批量删除"></c:if></li>
 		</ul>
 	</div>
 		
@@ -40,7 +41,8 @@
 			<table class="dataTab">
 				<tr>
 					<td><input id="selectAllChk" type="checkbox"></td><td>巡考编号</td><td>巡考日期</td><td>起时</td><td>终时</td><td>巡考区域</td>
-						<td>督导工号</td><td>督导姓名</td><td>巡考情况编号</td><td>巡考情况内容</td><td>具体情况记录</td><td>操作</td>
+						<td>督导工号</td><td>督导姓名</td><td>巡考情况编号</td><td>巡考情况内容</td><td>具体情况记录</td>
+						<c:if test="${staff.power.name=='管理员'}"><td>操作</td></c:if>
 				</tr>
 				<c:forEach items="${tourInspectionList}" var="tourInspection" varStatus="vs">
 					
@@ -63,7 +65,7 @@
 						<c:if test="${vs0.index!=0}"></tr></c:if>
 						
 						<c:if test="${vs0.index==0}">
-							<td rowspan="${len}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></tr>
+							<c:if test="${staff.power.name=='管理员'}"><td rowspan="${len}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></c:if></tr>
 						</c:if>
 					
 					</c:forEach>

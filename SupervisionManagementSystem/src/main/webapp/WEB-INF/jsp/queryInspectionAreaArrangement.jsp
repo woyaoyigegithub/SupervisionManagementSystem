@@ -31,7 +31,8 @@
 			<li>学期：<select name="semester"><option value=""></option><option value="1">1</option><option value="2">2</option></select></li>
 			<li>起止周：<input type="text" name="startingAndEndingWeeks"></li>
 			<li>公布日期：<input type="date" name="publicationTime"></li>
-			<li><input type="button" id="searchBtn" value="搜索"><input type="button" id="batchDeleteBtn" value="批量删除"></li>
+			<li><input type="button" id="searchBtn" value="搜索">
+				<c:if test="${staff.power.name=='管理员'}"><input type="button" id="batchDeleteBtn" value="批量删除"></c:if></li>
 		</ul>
 	</div>
 	
@@ -43,7 +44,8 @@
 			<table class="dataTab">
 				<tr>
 					<td><input id="selectAllChk" type="checkbox"></td><td>督查区域安排编号</td><td>学年</td><td>学期</td><td>起止周</td><td>公布日期</td>
-					<td>督查区域教学楼安排编号</td><td>教学楼</td><td>督导人数</td><td>督查区域人员安排编号</td><td>督导工号</td><td>督导姓名</td><td>星期</td><td>早中晚</td><td>添加记录</td><td>操作</td>
+					<td>督查区域教学楼安排编号</td><td>教学楼</td><td>督导人数</td><td>督查区域人员安排编号</td><td>督导工号</td><td>督导姓名</td><td>星期</td><td>早中晚</td><td>添加记录</td>
+					<c:if test="${staff.power.name=='管理员'}"><td>操作</td></c:if>
 				</tr>
 				
 				<c:forEach items="${inspectionAreaArrangementList}" var="inspectionAreaArrangement" varStatus="vs">
@@ -72,7 +74,8 @@
 								(staff.power.name=='督导' && staff.id==inspectionAreaArrangementSituation.supervisor.id && today==inspectionAreaArrangementSituation.week && vs.last) }">
 								<a href="addDailyInspection?inspectionAreaArrangementSituationId=${inspectionAreaArrangementSituation.id}">添加日常巡查</a></c:if></td>
 							<c:if test="${vs0.index==0 && vs1.index==0}">
-								<td rowspan="${buildingListLen*situationListLen}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td>
+								<c:if test="${staff.power.name=='管理员'}">
+								<td rowspan="${buildingListLen*situationListLen}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></c:if>
 							</c:if></tr>
 						</c:forEach>
 					</c:forEach>

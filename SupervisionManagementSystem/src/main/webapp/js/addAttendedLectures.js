@@ -18,9 +18,11 @@ numOfClassInput,actualNumInput,lateNumInput,leavingEarlyNumInput,dateInput,weekl
 weekSelect,jieciInput,attendedLecturesItemsIdTdList,evaluationScoreInputList,
 remarksTextareaList,totalScoreInput,evaluationLevelInput,experimentalProcessTextarea,
 alrpTextarea,discussingOrImprovingTextarea;
+//查询选课的button
+var queryCourseSelectionBtn;
 //错误消息显示标签
 var errorMessageP;
-//插入，清空buttton
+//插入，清空button
 var insertBtn,clearBtn;
 
 
@@ -241,6 +243,7 @@ function initComponentsState(flag){
 	//初始化失败时，除选课编号输入框外，其余输入框全部禁用
 	if(!flag){
 		courseSelectionIdInput.attr("disabled",false);
+		queryCourseSelectionBtn.show();
 		typeSelect.attr("disabled",true);
 		if(getIdentity()=="管理员"){ supervisorIdInput.attr("disabled",false); }else{ supervisorIdInput.attr("disabled",true); }
 		teachingSectionInput.attr("disabled",true);
@@ -264,6 +267,7 @@ function initComponentsState(flag){
 	}
 	//初始化成功时，除选课编号，读到工号，应到人数，日期，星期，总分和评价等级外，其余输入框状态均为正常输入状态
 	courseSelectionIdInput.attr("disabled",true);
+	queryCourseSelectionBtn.hide();
 	typeSelect.attr("disabled",false);
 	if(getIdentity()=="管理员"){ supervisorIdInput.attr("disabled",false); }else{ supervisorIdInput.attr("disabled",true); }
 	teachingSectionInput.attr("disabled",false);
@@ -411,6 +415,7 @@ function tryGetCourseSelectionIdByInquire(){
 				}
 				numOfClassInput.val(courseSelection.numOfClass);
 				initComponentsState(true);
+				finishLastInit();
 				//发起获取听课项列表请求，并刷新网页
 				$.post("queryAttendedLecturesItemsList",{dataType:"json",type:courseSelection.course.type},showAttendedLecturesItemsList);
 			},
@@ -439,9 +444,6 @@ function showTableData(){
 						
 						//发起获取听课项列表请求，并刷新网页
 						$.post("queryAttendedLecturesItemsList",{type:data.course.type},showAttendedLecturesItemsList);
-						
-						//恢复输入框输入状态
-						initComponentsState(true);
 						return;
 					}else if(status=="success" && courseSelection==undefined){	//不存在该选课
 						//显示错误消息
@@ -480,6 +482,8 @@ $(document).ready(function(){
 	alrpTextarea=$("textarea[name='alrp']");
 	discussingOrImprovingTextarea=$("textarea[name='discussingOrImproving']");
 	
+	queryCourseSelectionBtn=$("#queryCourseSelectionBtn");
+	
 	//初始化日期和星期
 	supervisorIdInput.val(getIdentity()=="督导"?getStaffId():"");	supervisorIdInput.attr("disabled",true);
 	dateInput.val(getDate());	dateInput.attr("disabled",true);
@@ -499,7 +503,7 @@ $(document).ready(function(){
 //	discussingOrImprovingTextarea.val("值得商榷或改进");
 	
 	errorMessageP=$(".errorMessage");
-
+	
 	insertBtn=$("#insertBtn");	
 	clearBtn=$("#clearBtn");
 	
@@ -512,7 +516,7 @@ $(document).ready(function(){
 	}
 	
 	
-	courseSelectionIdInput.blur(function(){
+	queryCourseSelectionBtn.click(function(){
 		errorMessageP.hide();
 		//若果课程编号格式正确，显示完整表格并发起ajax请求获取听课项列表
 		var vCourseSelectionId=/^\(\d{4}-\d{4}-\d\)-\d{10}-\d{7}-\d{1,2}$/;
@@ -523,6 +527,9 @@ $(document).ready(function(){
 			return;
 		}
 		showTableData();
+		//恢复输入框输入状态,并完成最后初始化
+		initComponentsState(true);
+		finishLastInit();
 	});
 	
 });

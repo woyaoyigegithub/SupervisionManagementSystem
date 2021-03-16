@@ -21,7 +21,8 @@
 	<table class="dataTab">
 		<tr>
 			<td class="essential">选课编号：</td><td colspan="5"><input type="text" name="courseSelectionId" maxlength="35" 
-				value="${courseSelectionId}" placeholder="请在此处输入选课编号，输好后外点一下"></td>
+				value="${courseSelectionId}" placeholder="(2020-2021-1)-0010000001-0000558-1">
+				<input type="button" id="queryCourseSelectionBtn" value="查询"></td>
 		</tr>
 		<tr>
 			<td class="essential">听课类型：</td><td colspan="2"><select name="type"><option value=""></option>

@@ -34,7 +34,8 @@
 				<option value="四">四</option><option value="五">五</option><option value="六">六</option>
 				<option value="日">日</option></select></li>
 			<li>巡查日期：<input type="date" name="date"></li>
-			<li><input type="button" id="searchBtn" value="搜索"><input type="button" id="batchDeleteBtn" value="批量删除"></li>
+			<li><input type="button" id="searchBtn" value="搜索">
+			<c:if test="${staff.power.name=='管理员'}"><input type="button" id="batchDeleteBtn" value="批量删除"></c:if></li>
 		</ul>
 	</div>
 		
@@ -46,7 +47,8 @@
 			<table class="dataTab">
 				<tr>
 					<td><input id="selectAllChk" type="checkbox"></td><td>日常巡查编号</td><td>周次</td><td>督查区域人员安排编号</td><td>督导工号</td>
-						<td>督导姓名</td><td>星期</td><td>早中晚</td><td>巡查日期</td><td>序号</td><td colspan="4">巡查项目</td><td colspan="4">日常巡查情况记录</td><td colspan="3">建议</td><td>操作</td>
+						<td>督导姓名</td><td>星期</td><td>早中晚</td><td>巡查日期</td><td>序号</td><td colspan="4">巡查项目</td><td colspan="4">日常巡查情况记录</td><td colspan="3">建议</td>
+						<c:if test="${staff.power.name=='管理员'}"><td>操作</td></c:if>
 				</tr>
 				<c:forEach items="${dailyInspectionList}" var="dailyInspection" varStatus="vs">
 				
@@ -63,7 +65,8 @@
 								<td rowspan="${len}">${dailyInspection.week}</td><td rowspan="${len}">${dailyInspection.inspectionAreaArrangementSituation.earlyMiddleLate}</td><td rowspan="${len}">${dailyInspection.date}</td>
 								<td>${dailyInspectionSituation.dailyInspectionItems.id}</td><td colspan="4">${dailyInspectionSituation.dailyInspectionItems.content}</td>
 								<td colspan="4">${dailyInspectionSituation.situation}</td><td colspan="3">${dailyInspectionSituation.suggest}</td>
-								<td rowspan="${len}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td>
+								<c:if test="${staff.power.name=='管理员'}">
+									<td rowspan="${len}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></c:if>
 							</tr>
 						</c:if>
 						

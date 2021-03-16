@@ -24,7 +24,8 @@
 		<ul class="advancedSearch">
 			<li>作业检查编号<input type="number" name="id" min="0"></li>
 			<li>选课编号<input type="text" name="courseSelectionId" min="0"></li>
-			<li><input type="button" id="searchBtn" value="搜索"><input type="button" id="batchDeleteBtn" value="批量删除"></li>
+			<li><input type="button" id="searchBtn" value="搜索">
+			<c:if test="${staff.power.name=='管理员'}"><input type="button" id="batchDeleteBtn" value="批量删除"></c:if></li>
 		</ul>
 	</div>
 	
@@ -37,7 +38,8 @@
 			<table class="dataTab">
 				<tr><td rowspan="2"><input id="selectAllChk" type="checkbox"></td><td rowspan="2">作业检查编号</td><td rowspan="2">选课编号</td>
 					<td rowspan="2">课程名称</td><td rowspan="2">任课教师工号</td><td rowspan="2">任课教师姓名</td><td rowspan="2">学生数</td><td rowspan="2">作业或报告份数</td>
-					<td rowspan="2">作业或报告次数</td><td colspan="5">批改批改情况</td><td rowspan="2">备注</td><td rowspan="2">操作</td></tr>
+					<td rowspan="2">作业或报告次数</td><td colspan="5">批改批改情况</td><td rowspan="2">备注</td>
+					<c:if test="${staff.power.name=='管理员'}"><td rowspan="2">操作</td></c:if></tr>
 				<tr><td>批改次数</td><td>批改认真</td><td>批改较认真</td><td>批改一般</td><td>批改一般</td></tr>
 				
 				<c:forEach items="${homeworkInspectionList}" var="homeworkInspection">
@@ -47,7 +49,7 @@
 					<td>${homeworkInspection.assignmentsOrReportsFenNum}</td><td>${homeworkInspection.assignmentsOrReportsCiNum}</td><td>${homeworkInspection.correctionTimes}</td>
 					<td>${homeworkInspection.seriousCorrection}</td><td>${homeworkInspection.moreSeriousCorrection}</td><td>${homeworkInspection.generalCorrection}</td>
 					<td>${homeworkInspection.poorCorrection}</td><td>${homeworkInspection.remarks}</td>
-					<td><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></tr>
+					<c:if test="${staff.power.name=='管理员'}"><td><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></c:if></tr>
 				</c:forEach>
 			</table>
 			

@@ -24,7 +24,8 @@
 		<ul class="advancedSearch">
 			<li>教案检查编号：<input type="number" name="id" min="0"></li>
 			<li>选课编号编号：<input type="text" name="courseSelectionId" min="0"></li>
-			<li><input type="button" id="searchBtn" value="搜索"><input type="button" id="batchDeleteBtn" value="批量删除"></li>
+			<li><input type="button" id="searchBtn" value="搜索">
+			<c:if test="${staff.power.name=='管理员'}"><input type="button" id="batchDeleteBtn" value="批量删除"></c:if></li>
 		</ul>
 	</div>
 	
@@ -37,7 +38,7 @@
 				<tr>
 					<td><input id="selectAllChk" type="checkbox"></td><td>教案检查编号</td><td>选课编号编号</td><td>课程名称</td><td>开课学院</td><td>教师工号</td>
 					<td>教师名称</td><td>教师所在部门</td><td>授课专业年级班级</td><td>教案检查指标项编号</td><td>教案检查指标项内容</td><td>检查情况选项</td><td>选项</td>
-					<td>值得商榷和肯定的地方</td><td>操作</td>
+					<td>值得商榷和肯定的地方</td><c:if test="${staff.power.name=='管理员'}"><td>操作</td></c:if>
 				</tr>
 				<c:forEach items="${teachingPlanInspectionList}" var="teachingPlanInspection" varStatus="vs">
 					<c:set var="len" value="${fn:length(teachingPlanInspection.teachingPlanInspectionSituationList)}"/>
@@ -55,7 +56,8 @@
 						
 						<c:if test="${vs0.index==0}">
 							<td rowspan="${len}">${teachingPlanInspection.discussingAndAffirming}</td>
-							<td rowspan="${len}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></tr>
+							<c:if test="${staff.power.name=='管理员'}"><td rowspan="${len}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></c:if>
+							</tr>
 						</c:if>
 					</c:forEach>
 					

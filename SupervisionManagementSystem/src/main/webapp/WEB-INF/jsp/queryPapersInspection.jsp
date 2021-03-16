@@ -26,7 +26,8 @@
 			<li>学生学号：<input type="number" name="studentId" min="0"></li>
 			<li>指导教师工号：<input type="number" name="instructorId" min="0"></li>
 			<c:if test="${'督导'!=staff.power.name}"><li>查询教师工号：<input type="number" name="consultTeacherId" min="0"></li></c:if>
-			<li><input type="button" id="searchBtn" value="搜索"><input type="button" id="batchDeleteBtn" value="批量删除"></li>
+			<li><input type="button" id="searchBtn" value="搜索">
+			<c:if test="${staff.power.name=='管理员'}"><input type="button" id="batchDeleteBtn" value="批量删除"></c:if></li>
 		</ul>
 	</div>
 		
@@ -40,7 +41,8 @@
 				<tr>
 					<td><input id="selectAllChk" type="checkbox"></td><td>毕业论文编号</td><td>学生学号</td><td>学生姓名</td><td>指导教师工号</td>
 					<td>指导教师姓名</td><td>查询教师工号</td><td>查询教师姓名</td><td>备注</td>
-					<td>抽查项编号</td><td>抽查项内容</td><td>抽查情况记录</td><td>选项</td><td>备注</td><td>查阅人对此毕业设计（论文）的综合意见</td><td>操作</td>
+					<td>抽查项编号</td><td>抽查项内容</td><td>抽查情况记录</td><td>选项</td><td>备注</td><td>查阅人对此毕业设计（论文）的综合意见</td>
+					<c:if test="${staff.power.name=='管理员'}"><td>操作</td></c:if>
 				</tr>
 				<c:forEach items="${papersInspectionList}" var="papersInspection">
 					<c:set var="len" value="${fn:length(papersInspection.papersInspectionSituationList)}"/>
@@ -63,9 +65,8 @@
 						
 						<c:if test="${vs.index==0}">
 							<td rowspan="${len}">${papersInspection.generalComments}</td>
-							<td rowspan="${len}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></tr>
+							<c:if test="${staff.power.name=='管理员'}"><td rowspan="${len}"><img class="updateImage" src="images/update.gif"><img class="deleteImage" src="images/delete.gif"></td></c:if></tr>
 						</c:if>
-						
 					</c:forEach>
 				</c:forEach>
 			</table>

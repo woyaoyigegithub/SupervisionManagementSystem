@@ -30,10 +30,11 @@
 					<option value="新进教师">新进教师</option><option value="随机听课">随机听课</option>
 					<option value="其他 ">其他 </option></select></li>
 				<li>选课编号:<input type="text" name="courseSelectionId" min="0"></li>
-				<c:if test="${'督导'!=staff.power.name}"><li>督导编号:<input type="number" name="supervisorId" min="0"></li></c:if>
+				<c:if test="${staff.power.name=='管理员'}"><li>督导编号:<input type="number" name="supervisorId" min="0"></li></c:if>
 				<li>教师编号:<input type="number" name="teacherId" min="0"></li>
 				<li>上课班级编号:<input type="number" name="classId" min="0"></li>
-				<li><input type="button" id="searchBtn" value="搜索"><input type="button" id="batchDeleteBtn" value="批量删除"></li>
+				<li><input type="button" id="searchBtn" value="搜索">
+				<c:if test="${staff.power.name=='管理员'}"><input type="button" id="batchDeleteBtn" value="批量删除"></c:if></li>
 			</ul>
 		</div>
 	
@@ -48,7 +49,8 @@
 					<td><input id="selectAllChk" type="checkbox"></td><td>听课编号</td><td>听课类型</td><td>选课编号</td><td>督导工号</td>
 					<td>督导姓名</td><td>教师编号</td><td>教师姓名</td><td>教学章节</td><td>上课班级编号</td><td>上课班级</td><td>应到人数</td><td>实到人数</td>
 					<td>迟到人数</td><td>早退人数</td><td>听课日期</td><td>周次</td><td>星期</td><td>节次</td><td>评价项编号</td><td>评价项内容</td><td>分数</td>
-					<td>评价分数</td><td>备注</td><td>总分</td><td>评价等级</td><td>实验过程</td><td>值得肯定、学习、借鉴或推广的是</td><td>值得商榷或改进的是</td><td>操作</td>
+					<td>评价分数</td><td>备注</td><td>总分</td><td>评价等级</td><td>实验过程</td><td>值得肯定、学习、借鉴或推广的是</td><td>值得商榷或改进的是</td>
+					<c:if test="${staff.power.name=='管理员'}"><td>操作</td></c:if>
 				</tr>
 				<c:forEach items="${attendedLecturesList}" var="attendedLectures" varStatus="vs">
 					<!-- 听课情况列表长度 -->
@@ -83,8 +85,9 @@
 							<td rowspan="${len}">${attendedLectures.experimentalProcess}</td>
 							<td rowspan="${len}">${attendedLectures.alrp}</td>
 							<td rowspan="${len}">${attendedLectures.discussingOrImproving}</td>
-							<td rowspan="${len}"><img class="updateImage" src="images/update.gif">
-							<img class="deleteImage" src="images/delete.gif"></td>
+							<c:if test="${staff.power.name=='管理员'}"><td rowspan="${len}"><img class="updateImage" src="images/update.gif">
+							<img class="deleteImage" src="images/delete.gif"></td></c:if></tr>
+							
 						</c:if>
 					</c:forEach>
 						
