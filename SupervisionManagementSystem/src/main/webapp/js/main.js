@@ -1,6 +1,5 @@
 var identityList=["管理员","督导"];	//未连接数据库时临时的身份列表
 var staffId,identity;	//获取职工Id和身份
-//var countURLList=["countAttendedLecturesNum","countDailyInspectionNum","countTourInspectionNum"];	//用于数据统计的URL
 var targetURLList=[			//对应于itemsList的跳转URL列表
 	"addClass","queryClass","addStudent","queryStudent","addClassroom","queryClassroom",
 	"addCourse","queryCourse","addPower","queryPower","addStaff","queryStaff",
@@ -38,11 +37,9 @@ function toggleItemsByOneMenuItemsClick(_this){
 	
 	//依据第一个菜单项的是否显示，来切换显示隐藏状态
 	if(itemsList.eq(0).css("display")==""||itemsList.eq(0).css("display")=="none" ){
-//		itemsList.css("display","block");
 		itemsList.show();
 		return;
 	}
-//	itemsList.css("display","none");
 	itemsList.hide();
 }
 
@@ -65,14 +62,11 @@ function toggleTwoMenuItemsByOneMenuItemsClick(_this){
 	twoMenuItemsList=itemsAndTwoMenuItemsList.filter(".twoMenuItems");
 	//隐藏两个一级菜单项之间的二级菜单项，显示其中的菜单项
 	if(twoMenuItemsList.eq(0).css("display")==""||twoMenuItemsList.eq(0).css("display")=="none"){
-//		itemsAndTwoMenuItemsList.css("display","none");
-//		twoMenuItemsList.css("display","block");
 		itemsAndTwoMenuItemsList.hide();
 		twoMenuItemsList.show();
 		return;
 	}
 	//隐藏两个一级菜单项之间的二级菜单项和菜单项
-//	itemsAndTwoMenuItemsList.css("display","none");
 	itemsAndTwoMenuItemsList.hide();
 }
 
@@ -98,11 +92,9 @@ function toggleItemsByTwoMenuItemsClick(_this){
 	}
 	//显示或隐藏所选菜单项
 	if(itemsList.eq(0).css("display")==""||itemsList.eq(0).css("display")=="none"){
-//		itemsList.css("display","block");
 		itemsList.show();
 		return;
 	}
-//	itemsList.css("display","none");
 	itemsList.hide();
 }
 
