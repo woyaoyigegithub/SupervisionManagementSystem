@@ -18,7 +18,7 @@
 	
 	<!-- 数据表格 -->
 	<table class="dataTab">
-		<tr><td class="essential">学号：</td><td><input type="number" name="id" min="0" maxlength="10"></td><td class="errors"></td></tr>
+		<tr><td class="essential">学号：</td><td><input type="number" name="id" min="0" maxlength="12"></td><td class="errors"></td></tr>
 		<tr><td class="essential">姓名：</td><td><input type="text" name="name"></td><td class="errors"></td></tr>
 		<tr><td class="essential">性别：</td><td><select name="sex"><option value=""></option><option value="男">男</option><option value="女">女</option></select></td><td class="errors"></td></tr>
 		<tr><td class="essential">所在班级：</td><td><input type="text" name="classId"></td><td class="errors"></td></tr>
