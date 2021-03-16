@@ -118,7 +118,7 @@
 		</tr>
 		<tr><!-- 跟踪听课', '讲课比赛', '新进教师', '随机听课', '其他 -->
 			<td class="essential">教学章节：</td><td colspan="2"><input type="text" name="teachingSection"></td>
-			<td>上课班级：</td><td colspan="2"><input type="text" name="classId"></td>
+			<td class="essential">上课班级：</td><td colspan="2"><input type="text" name="classId"></td>
 		</tr>
 		<tr>
 			<td class="essential">学生出勤：</td><td colspan="2">应到<input type="number" name="numOfClass" min="0">人,
