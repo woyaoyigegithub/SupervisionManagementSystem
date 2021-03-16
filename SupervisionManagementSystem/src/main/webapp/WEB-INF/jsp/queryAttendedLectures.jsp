@@ -118,7 +118,7 @@
 		</tr>
 		<tr><!-- 跟踪听课', '讲课比赛', '新进教师', '随机听课', '其他 -->
 			<td class="essential">教学章节：</td><td colspan="2"><input type="text" name="teachingSection"></td>
-			<td class="essential">上课班级：</td><td colspan="2"><input type="text" name="classId"></td>
+			<td>上课班级：</td><td colspan="2"><input type="text" name="classId"></td>
 		</tr>
 		<tr>
 			<td class="essential">学生出勤：</td><td colspan="2">应到<input type="number" name="numOfClass" min="0">人,
@@ -128,7 +128,7 @@
 			<td class="essential">听课日期：</td>
 			<td colspan="2">
 				日期：<input type="date" name="date" disabled><br>第<input type="number" name="weekly" min="1" max="30">周,
-				星期<select name="week"><option value="一">一</option><option value="二">二</option><option value="三">三</option>
+				星期<select name="week"><option value=""></option><option value="一">一</option><option value="二">二</option><option value="三">三</option>
 				<option value="四">四</option><option value="五">五</option><option value="六">六</option><option value="日">日</option></select>,
 				第<input type="text" name="jieci" maxlength="4" value="3-4">节
 			</td>

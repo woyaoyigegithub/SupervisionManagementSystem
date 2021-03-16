@@ -32,7 +32,7 @@
 					<c:choose><c:when test="${inspectionAreaArrangementSituationId==selectedInspectionAreaArrangementSituationId}">
 						<option selected>${inspectionAreaArrangementSituationId}</option></c:when>
 						<c:otherwise><option>${inspectionAreaArrangementSituationId}</option></c:otherwise></c:choose></c:forEach></select></td>
-				<td class="essential">周次：</td><td><input type="number" name="weekly" min="0"></td>
+				<td class="essential">周次：</td><td><input type="number" name="weekly" placeholder="5" min="0"></td>
 				<td class="essential">星期：</td><td><select name="week"><option value=""></option>
 				<option value="一">一</option><option value="一">一</option><option value="二">二</option><option value="三">三</option>
 				<option value="四">四</option><option value="五">五</option><option value="六">六</option><option value="日">日</option>
@@ -45,16 +45,16 @@
 			</tr>
 			<c:forEach items="${dailyInspectionItemsList}" var="dailyInspectionItems">
 				<tr>
-					<td>${dailyInspectionItems.id}</td><td colspan="2">${dailyInspectionItems.content}</td><td colspan="3"><textarea name="situation" rows="3" cols="40"></textarea></td>
-					<td colspan="2"><textarea name="suggest" rows="3" cols="35"></textarea></td>
+					<td>${dailyInspectionItems.id}</td><td colspan="2">${dailyInspectionItems.content}</td><td colspan="3"><textarea name="situation" placeholder="请输入日常巡查情况记录" rows="3" cols="40"></textarea></td>
+					<td colspan="2"><textarea name="suggest" placeholder="给点建议" rows="3" cols="35"></textarea></td>
 				</tr>
 			</c:forEach>
 			
 			<tr><td colspan="8">教师提前下课情况记录表</td></tr>
 			
 			<tr><td colspan="2">选课编号</td><td colspan="2">上课班级</td><td colspan="2">正常下课时间</td><td colspan="2">实际下课时间</td></tr>
-			<tr><td colspan="2"><input type="text" name="courseSelectionId"></td>
-				<td colspan="2"><input type="number" name="classId"></td><td colspan="2"><input type="time" name="normalTime"></td>
+			<tr><td colspan="2"><input type="text" name="courseSelectionId" placeholder="(2020-2021-1)-0010000001-0000558-1"></td>
+				<td colspan="2"><input type="number" name="classId" placeholder="2017060841"></td><td colspan="2"><input type="time" name="normalTime"></td>
 				<td colspan="2"><input type="time" name="actualTime"></td></tr>
 			<tr><td colspan="8"><input type="button" id="appendRowBtn" value="追加一行"><input type="button" id="deleteLastRowBtn" value="删除最后一行"></td></tr>
 			<tr><td colspan="8"><input type="button" id="insertBtn" value="提交"><input type="button" id="clearBtn" value="清空"></td></tr>

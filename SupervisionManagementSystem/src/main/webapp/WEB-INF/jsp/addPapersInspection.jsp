@@ -24,10 +24,10 @@
 			<td colspan="2">备注</td>
 		</tr>
 		<tr>
-			<td><input type="number" name="studentId" min="0"></td>
-			<td><input type="number" name="instructorId" min="0"></td>
-			<td><input type="number" name="consultTeacherId" min="0"></td>
-			<td colspan="2"><textarea name="remarks" rows="3" cols="40"></textarea></td>
+			<td><input type="number" name="studentId" placeholder="201706084101" min="0"></td>
+			<td><input type="number" name="instructorId" placeholder="0000009" min="0"></td>
+			<td><input type="number" name="consultTeacherId" placeholder="1000005" min="0"></td>
+			<td colspan="2"><textarea name="remarks" placeholder="写点备注" rows="3" cols="40"></textarea></td>
 		</tr>
 		
 		<tr>
@@ -40,10 +40,10 @@
 			<tr><td>${papersInspectionItems.id}</td><td>${papersInspectionItems.content}</td>
 			<td>${papersInspectionItems.options}</td><td><select name="situation"><option value=""></option>
 			<c:forEach items="${optionArray}" var="option"><option>${option}</option></c:forEach>
-			</select></td><td><textarea name="remarks" rows="3" cols="30"></textarea></td></tr>
+			</select></td><td><textarea name="remarks" placeholder="写点备注" rows="3" cols="30"></textarea></td></tr>
 		</c:forEach>
 		
-		<tr><td colspan="2" class="essential">查阅人对此毕业设计（论文）的综合意见：</td><td colspan="3"><textarea name="generalComments" rows="3" cols="70"></textarea></td></tr>
+		<tr><td colspan="2" class="essential">查阅人对此毕业设计（论文）的综合意见：</td><td colspan="3"><textarea name="generalComments" placeholder="请输入综合意见" rows="3" cols="70"></textarea></td></tr>
 		<tr><td colspan="5"><input type="button" id="insertBtn" value="提交"><input type="button" id="clearBtn" value="清空"></td></tr>
 	</table>
 	

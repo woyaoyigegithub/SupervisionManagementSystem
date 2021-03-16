@@ -25,10 +25,10 @@
 		</tr>
 		<tr>
 			<td><input type="date" name="date"></td>
-			<td><input type="number" name="startingTime" min="0"></td>
-			<td><input type="number" name="endingTime" min="0"></td>
-			<td><input type="text" name="tourInspectionArea"></input></td>
-			<td><input type="number" name="supervisorId" min="0"></td>
+			<td><input type="number" name="startingTime" placeholder="10" min="0"></td>
+			<td><input type="number" name="endingTime" placeholder="12" min="0"></td>
+			<td><input type="text" name="tourInspectionArea" placeholder="慎思5栋、6栋"></input></td>
+			<td><input type="number" name="supervisorId" placeholder="0000077" min="0"></td>
 		</tr>
 		
 		<tr>
@@ -36,7 +36,7 @@
 		</tr>
 		<c:forEach items="${tourInspectionItemsList}" var="tourInspectionItems">
 			<tr>
-				<td>${tourInspectionItems.id}</td><td colspan="2">${tourInspectionItems.content}</td><td colspan="2"><textarea name="situation" rows="3" cols="70"></textarea></td>
+				<td>${tourInspectionItems.id}</td><td colspan="2">${tourInspectionItems.content}</td><td colspan="2"><textarea name="situation" placeholder="请填写具体情况记录" rows="3" cols="70"></textarea></td>
 			</tr>
 		</c:forEach>
 		

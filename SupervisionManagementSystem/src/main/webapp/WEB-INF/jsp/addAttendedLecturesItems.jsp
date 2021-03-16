@@ -18,8 +18,8 @@
 	
 	<!-- 数据表格 -->
 	<table class="dataTab">
-		<tr><td class="essential">评价项内容：</td><td><textarea name="content" rows="5" cols="25" ></textarea></td><td class="errors"></td></tr>
-		<tr><td class="essential">分数：</td><td><input type="number" name="score"></td><td class="errors"></td></tr>
+		<tr><td class="essential">评价项内容：</td><td><textarea name="content" placeholder="1. 教师形象：着装得体（2）；教态自然大方（2）" rows="5" cols="25" ></textarea></td><td class="errors"></td></tr>
+		<tr><td class="essential">分数：</td><td><input type="number" name="score" placeholder="4"></td><td class="errors"></td></tr>
 		<tr><td colspan="2"><input type="button" id="insertBtn" value="提交"><input type="button" id="clearBtn" value="清空"></td></tr>
 	</table>
 	

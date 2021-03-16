@@ -19,9 +19,9 @@
 	
 	<!-- 数据表格 -->
 	<table class="dataTab">
-		<tr><td colspan="2" class="essential">教案检查指标项内容：</td><td><textarea name="content" rows="3" cols="30"></textarea></td><td class="errors"></td></tr>
-		<tr><td rowspan="2" class="essential">选项</td><td>选项1：</td><td><input type="text" name="options"></td><td class="errors"></td></tr>
-		<tr><td>选项2：</td><td><input type="text" name="options"></td><td class="errors"></td></tr>
+		<tr><td colspan="2" class="essential">教案检查指标项内容：</td><td><textarea name="content" placeholder="课程性质和目的" rows="3" cols="30"></textarea></td><td class="errors"></td></tr>
+		<tr><td rowspan="2" class="essential">选项</td><td>选项1：</td><td><input type="text" name="options" placeholder="明确具体"></td><td class="errors"></td></tr>
+		<tr><td>选项2：</td><td><input type="text" name="options" placeholder="简略"></td><td class="errors"></td></tr>
 		<tr><td colspan="3"><input type="button" id="appendRowOptionsBtn" value="追加一行选项">
 		<input type="button" id="deleteLastRowOptionsBtn" value="删除最后一行选项"></td></tr>
 		<tr><td colspan="3"><input type="button" id="insertBtn" value="提交"><input type="button" id="clearBtn" value="清空"></td></tr>

@@ -19,8 +19,8 @@
 	
 	<!-- 数据表格 -->
 	<table class="dataTab">
-		<tr><td class="essential">课程编号：</td><td><input type="number" name="id" min="0"></td><td class="errors"></td></tr>
-		<tr><td class="essential">课程名称：</td><td><input type="text" name="name"></td><td class="errors"></td></tr>
+		<tr><td class="essential">课程编号：</td><td><input type="number" name="id" placeholder="0010000001" min="0"></td><td class="errors"></td></tr>
+		<tr><td class="essential">课程名称：</td><td><input type="text" name="name" placeholder="水污染控制工程实验"></td><td class="errors"></td></tr>
 		<tr><td>课程性质：</td><td><select name="nature"><option value=""></option><option value="必修课">必修课</option><option value="公选课">公选课</option>
 			<option value="任选课">任选课</option><option value="实践课">实践课</option><option value="限选课">限选课</option></select></td><td class="errors"></td></tr>
 		<tr><td class="essential">课程类型：</td><td><select name="type"><option value=""></option><option value="理论">理论</option><option value="实验">实验</option>

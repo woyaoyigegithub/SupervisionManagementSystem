@@ -25,7 +25,7 @@
 				</select></td>
 			<td class="essential">学期：</td><td><select name="semester"><option value=""></option>
 			<option value="1">1</option><option value="2">2</option></select></td>
-			<td class="essential">起止周：</td><td><input type="text" name="startingAndEndingWeeks"></td>
+			<td class="essential">起止周：</td><td><input type="text" name="startingAndEndingWeeks" placeholder="2-16"></td>
 			<td>公布日期：</td><td><input type="date" name="publicationTime"></td>
 		</tr>
 		<tr>
@@ -38,12 +38,12 @@
 			
 				<c:if test="${vs0.index==0}">
 					<tr>
-						<td rowspan="16" colspan="2"><textarea name="academicBuilding" cols="35" rows="10"></textarea></td>
-						<td rowspan="16" colspan="2"><input type="number" name="inspectorsNum" min="0"></td>
+						<td rowspan="16" colspan="2"><textarea name="academicBuilding" placeholder="明辨楼1、2、钢琴教室、一附、二附" cols="35" rows="10"></textarea></td>
+						<td rowspan="16" colspan="2"><input type="number" name="inspectorsNum" placeholder="1" min="0"></td>
 					</tr>
 				</c:if>
 				<c:if test="${vs0.index!=0}"><tr></c:if>
-				<td colspan="2"><input type="text" name="supervisorId"></td>
+				<td colspan="2"><input type="text" name="supervisorId" placeholder="0000077"></td>
 				<td><select name="week"><option value=""></option>
 					<option value="周一">周一</option><option value="周二">周二</option><option value="周三">周三</option><option value="周四">周四</option>
 					<option value="周五">周五</option><option value="周六">周六</option><option value="周日">周日</option></select></td>

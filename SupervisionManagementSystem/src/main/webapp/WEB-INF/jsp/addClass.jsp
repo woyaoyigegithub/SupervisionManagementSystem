@@ -18,10 +18,10 @@
 	
 	<!-- 数据表格 -->
 	<table class="dataTab">
-		<tr><td class="essential">班级编号:</td><td><input type="number" name="id" min="0" maxlength="10"></td><td class="errors"></td></tr>
-		<tr><td class="essential">班级名称：</td><td><input type="text" name="name"></td><td class="errors"></td></tr>
-		<tr><td class="essential">专业：</td><td><input type="text" name="major"></td><td class="errors"></td></tr>
-		<tr><td class="essential">年级：</td><td><input type="text" name="grade"></td><td class="errors"></td></tr>
+		<tr><td class="essential">班级编号:</td><td><input type="number" name="id" placeholder="2017060841" min="0" maxlength="10"></td><td class="errors"></td></tr>
+		<tr><td class="essential">班级名称：</td><td><input type="text" name="name" placeholder="17级软件工程1班"></td><td class="errors"></td></tr>
+		<tr><td class="essential">专业：</td><td><input type="text" name="major" placeholder="2017级软件工程"></td><td class="errors"></td></tr>
+		<tr><td class="essential">年级：</td><td><input type="text" name="grade" placeholder="2017"></td><td class="errors"></td></tr>
 		<tr><td class="essential">所在院系：</td><td><select name="department"><option value=""></option>
 			<c:forEach items="${departmentList}" var="department"><option>${department}</option></c:forEach>
 			</select><td class="errors"></td></tr>

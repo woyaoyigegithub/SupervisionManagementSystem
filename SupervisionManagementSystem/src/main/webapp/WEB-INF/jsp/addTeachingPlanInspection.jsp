@@ -35,7 +35,7 @@
 		</c:forEach>
 		<!-- 填充教案检查指标项列表处end -->
 		
-		<tr><td colspan="2" class="essential">值得商榷和肯定的地方：</td><td colspan="2"><textarea name="discussingAndAffirming" rows="3" cols="50"></textarea></td></tr>
+		<tr><td colspan="2" class="essential">值得商榷和肯定的地方：</td><td colspan="2"><textarea name="discussingAndAffirming" placeholder="值得商榷和肯定的地方" rows="3" cols="50"></textarea></td></tr>
 		<tr><td colspan="4"><input type="button" id="insertBtn" value="提交"><input type="button" id="clearBtn" value="清空"></td></tr>
 	</table>
 	

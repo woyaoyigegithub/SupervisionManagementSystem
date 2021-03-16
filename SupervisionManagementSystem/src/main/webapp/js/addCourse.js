@@ -27,7 +27,7 @@ function verifyData(){
 	//校验id,name等表单数据是否符合规范。	（注意：/^...$/ 为正则表达式写法）
 	var vId=/^\d{10}$/;
 	var vName=/^.+$/;
-	var vNature=/^.+$/;
+	var vNature=/^.*$/;
 	var vType=/^(理论)|(实验)|(美术)|(体育)$/;
 	
 	var flag=true;

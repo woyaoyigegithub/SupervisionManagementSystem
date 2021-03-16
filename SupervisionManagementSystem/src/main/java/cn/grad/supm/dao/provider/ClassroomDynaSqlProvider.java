@@ -28,7 +28,7 @@ public class ClassroomDynaSqlProvider {
 						WHERE("seating_capacity=#{classroom.seatingCapacity}");
 					}
 					if(classroom.getType() != null && !classroom.getType().equals("")){
-						WHERE("type LIKE CONCAT ('%',#{classroom.type},'%')");
+						WHERE("type=#{classroom.type}");
 					}
 					if(classroom.getBuildingNum() != null && !"".equals(classroom.getBuildingNum())){
 						WHERE("building_num LIKE CONCAT ('%',#{classroom.buildingNum},'%')");
@@ -62,7 +62,7 @@ public class ClassroomDynaSqlProvider {
 						WHERE("seating_capacity=#{classroom.seatingCapacity}");
 					}
 					if(classroom.getType() != null && !classroom.getType().equals("")){
-						WHERE("type LIKE CONCAT ('%',#{classroom.type},'%')");
+						WHERE("type=#{classroom.type}");
 					}
 					if(classroom.getBuildingNum() != null ){
 						WHERE("building_num LIKE CONCAT ('%',#{classroom.buildingNum},'%')");

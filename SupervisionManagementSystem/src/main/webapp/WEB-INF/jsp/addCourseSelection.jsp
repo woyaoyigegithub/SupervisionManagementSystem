@@ -19,14 +19,14 @@
 
 	<!-- 数据表格 -->
 	<table class="dataTab">
-		<tr><td class="essential">选课课号：</td><td><input type="text" name="id" min="0"></td><td class="errors"></td></tr>
-		<tr><td class="essential">课程编号：</td><td><input type="number" name="courseId" min="0"></td><td class="errors"></td></tr>
-		<tr><td class="essential">授课教师工号：</td><td><input type="number" name="teacherId" min="0"></td><td class="errors"></td></tr>
-		<tr><td>选课班级编号：</td><td><input type="number" name="classId" min="0"></td><td class="errors"></td></tr>
+		<tr><td class="essential">选课课号：</td><td><input type="text" name="id" placeholder="(2020-2021-1)-0010000001-0000558-1" min="0"></td><td class="errors"></td></tr>
+		<tr><td class="essential">课程编号：</td><td><input type="number" name="courseId" placeholder="0010000001" min="0"></td><td class="errors"></td></tr>
+		<tr><td class="essential">授课教师工号：</td><td><input type="number" name="teacherId" placeholder="0000558" min="0"></td><td class="errors"></td></tr>
+		<tr><td>选课班级编号：</td><td><input type="number" name="classId" placeholder="2017010101" min="0"></td><td class="errors"></td></tr>
 		<tr><td class="essential">开课学院：</td><td><select name="department"><option value=""></option>
 			<c:forEach items="${departmentList}" var="department"><option value="${department}">${department}</option></c:forEach></select></td>
 			<td class="errors"></td></tr>
-		<tr><td class="essential">教室编号：</td><td><input type="number" name="classroomId" min="0"></td><td class="errors"></td></tr>
+		<tr><td class="essential">教室编号：</td><td><input type="number" name="classroomId" placeholder="0250001" min="0"></td><td class="errors"></td></tr>
 		<tr><td class="essential">学年：</td><td><select name="schoolYear"><option value=""></option>
 			<c:forEach items="${schoolYearList}" var="schoolYear"><option>${schoolYear}</option></c:forEach>
 			</select></td><td class="errors"></td></tr>
@@ -35,11 +35,11 @@
 		<tr><td class="essential">星期：</td><td><select name="week"><option value=""></option>
 			<option value="一">一</option><option value="二">二</option><option value="三">三</option><option value="四">四</option>
 			<option value="五">五</option><option value="六">六</option><option value="日">日</option></select></td><td class="errors"></td></tr>
-		<tr><td class="essential">节次：</td><td><input type="text" name="jieci"></td><td class="errors"></td></tr>
-		<tr><td class="essential">单双周：</td><td><select name="biweekly"><option value="">==请选择单双周==</option><option value="单">单</option>
+		<tr><td class="essential">节次：</td><td><input type="text" name="jieci" placeholder="1-2"></td><td class="errors"></td></tr>
+		<tr><td class="essential">单双周：</td><td><select name="biweekly"><option value=""></option><option value="单">单</option>
 			<option value="双">双</option><option value="单双">单双</option></select></td><td class="errors"></td></tr>
-		<tr><td class="essential">起止周：</td><td><input type="text" name="startingAndEndingWeeks"></td><td class="errors"></td></tr>
-		<tr><td>上课人数：</td><td><input type="number" name="numOfClass" min="0"></td><td class="errors"></td></tr>
+		<tr><td class="essential">起止周：</td><td><input type="text" name="startingAndEndingWeeks" placeholder="3-10"></td><td class="errors"></td></tr>
+		<tr><td>上课人数：</td><td><input type="number" name="numOfClass" placeholder="30" min="0"></td><td class="errors"></td></tr>
 		<tr><td colspan="2"><input type="button" id="insertBtn" value="提交"><input type="button" id="clearBtn" value="清空"></td></tr>
 	</table>
 	

@@ -19,8 +19,8 @@
 	
 	<!-- 数据表格 -->
 	<table class="dataTab">
-		<tr><td class="essential">权限名称：</td><td><input type="text" name="name"></td><td class="errors"></td></tr>
-		<tr><td>描述：</td><td><input type="text" name="description"></td><td class="errors"></td></tr>
+		<tr><td class="essential">权限名称：</td><td><input type="text" name="name" placeholder="教师"></td><td class="errors"></td></tr>
+		<tr><td>描述：</td><td><input type="text" name="description" placeholder="简单描述"></td><td class="errors"></td></tr>
 		<tr><td colspan="2"><input type="button" id="insertBtn" value="提交"><input type="button" id="clearBtn" value="清空"></td></tr>
 	</table>
 	

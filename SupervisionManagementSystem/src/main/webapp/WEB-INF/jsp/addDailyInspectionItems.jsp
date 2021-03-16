@@ -18,7 +18,7 @@
 	
 	<!-- 数据表格 -->
 	<table class="dataTab">
-		<tr><td class="essential">巡查项内容：</td><td><textarea name="content" rows="3" cols="30"></textarea></td><td class="errors"></td></tr>
+		<tr><td class="essential">巡查项内容：</td><td><textarea name="content" placeholder="请输入巡察项内容" rows="3" cols="30"></textarea></td><td class="errors"></td></tr>
 		<tr><td colspan="2"><input type="button" id="insertBtn" value="提交"><input type="button" id="clearBtn" value="清空"></td></tr>
 	</table>
 	
