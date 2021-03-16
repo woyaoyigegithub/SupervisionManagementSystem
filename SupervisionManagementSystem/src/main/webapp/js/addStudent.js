@@ -33,7 +33,7 @@ function verifyData(){
 	
 	
 	if(!vId.test(idInput.val())){ 
-		idErrorTd.text("学号必须是十位数"); 
+		idErrorTd.text("学号必须是12十位数"); 
 		idErrorTd.show();
 		flag=false;
 	}
