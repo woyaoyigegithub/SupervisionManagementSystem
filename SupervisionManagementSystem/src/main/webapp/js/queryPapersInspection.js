@@ -177,7 +177,7 @@ function submitUpdateAreaData(){
 	studentId=uStudentIdInput.val();
 	instructorId=uInstructorIdInput.val();
 	consultTeacherId=uConsultTeacherIdInput.val();
-	uSituationSelectList.each((index)=>{
+	uSituationSelectList.each(function(index){
 		var tr=trList.eq(index);
 		var uSituationSelect=uSituationSelectList.eq(index);
 		var uRemarksTextarea=uRemarksTextareaList.eq(index+1);

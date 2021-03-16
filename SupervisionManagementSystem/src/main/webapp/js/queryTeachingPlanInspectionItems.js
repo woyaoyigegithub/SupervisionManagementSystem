@@ -95,7 +95,7 @@ function verifyUpdateAreaData(){
 		contentErrorTd.show();
 		flag=false;
 	}
-	uOptionsInputList.each((index)=>{
+	uOptionsInputList.each(function(index){
 		var uOptionsInput=uOptionsInputList.eq(index);
 		var optionsErrorTd=optionsErrorTdList.eq(index);
 		if(!vOptions.test(uOptionsInput.val())){ 

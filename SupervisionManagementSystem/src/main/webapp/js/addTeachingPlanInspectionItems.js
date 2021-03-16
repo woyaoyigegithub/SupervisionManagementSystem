@@ -42,7 +42,7 @@ function verifyData(){
 		contentErrorTd.show();
 		flag=false;
 	}
-	optionsInputList.each((index)=>{
+	optionsInputList.each(function(index){
 		var optionsInput=optionsInputList.eq(index);
 		var optionsErrorTd=optionsErrorTdList.eq(index);
 		if(!vOptions.test(optionsInput.val())){ 

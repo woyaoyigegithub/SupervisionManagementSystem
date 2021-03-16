@@ -114,7 +114,7 @@ public class CourseSelectionDynaSqlProvider {
 	public String count(Map<String, Object> params){
 		return new SQL(){
 			{
-				SELECT("count(COURSE_SELECTION.id)");
+				SELECT("count("+COURSE_SELECTION+".id)");
 				FROM(COURSE_SELECTION);
 				LEFT_OUTER_JOIN(COURSE+" ON "+COURSE_SELECTION+".course_id = "+COURSE+".id");
 				LEFT_OUTER_JOIN(STAFF+" ON "+COURSE_SELECTION+".teacher_id = "+STAFF+".id");

@@ -77,7 +77,7 @@ function getUpdateAreaDataFromTable(updateImage) {
 		appendRowOptionsBtn.parents("tr").before(html);
 		//初始化uOptionsInputList和optionsErrorTdList
 		uOptionsInputList=$("input[name='options']");
-		optionsErrorTdList=$(".errors").not((index)=>{if(index<2){return true;}});
+		optionsErrorTdList=$(".errors").not(function(index){if(index<2){return true;}});
 	}
 }
 
@@ -167,7 +167,7 @@ function clearUpdateAreaData(){
 	optionsTd.attr("rowspan",count);
 	//初始化optionsInputList和optionsErrorTdList和count
 	uOptionsInputList=$("input[name='options']");
-	optionsErrorTdList=$(".errors").not((index)=>{if(index<2){return true;}});
+	optionsErrorTdList=$(".errors").not(function(index){if(index<2){return true;}});
 }
 
 
@@ -188,7 +188,7 @@ $(document).ready(function(){
 	
 	idErrorTd=$(".errors").eq(0);
 	contentErrorTd=$(".errors").eq(1);
-	optionsErrorTdList=$(".errors").not((index)=>{if(index<2){return true;}});
+	optionsErrorTdList=$(".errors").not(function(index){if(index<2){return true;}});
 	
 	optionsTd=updateDataTab.find("td:contains(抽查情况选项)");
 
@@ -212,7 +212,7 @@ $(document).ready(function(){
 		appendRowOptionsBtn.parents("tr").before(html);
 		//初始化optionsInputList和optionsErrorTdList
 		uOptionsInputList=$("input[name='options']");
-		optionsErrorTdList=$(".errors").not((index)=>{if(index<2){return true;}});
+		optionsErrorTdList=$(".errors").not(function(index){if(index<2){return true;}});
 	});
 	
 	
@@ -226,7 +226,7 @@ $(document).ready(function(){
 		
 		//初始化optionsInputList和optionsErrorTdList和count
 		uOptionsInputList=$("input[name='options']");
-		optionsErrorTdList=$(".errors").not((index)=>{if(index<2){return true;}});
+		optionsErrorTdList=$(".errors").not(function(index){if(index<2){return true;}});
 		
 	});
 	

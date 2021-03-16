@@ -166,7 +166,7 @@ $(document).ready(function(){
 //	instructorIdInput.val("0000066");
 //	consultTeacherIdInput.val(getIdentity()=="督导"?getStaffId():"0000258");
 //	remarksTextareaList.val("无");
-//	situationSelectList.each((index)=>{
+//	situationSelectList.each(function(index){
 //		var situationSelect=situationSelectList.eq(index);
 //		var first_children=situationSelect.children(":eq(1)");
 //		first_children.prop('selected',true);

@@ -126,7 +126,7 @@ function deleteNavigNodeAndTargetURLByIdentity(){
 	//根据需要删除的URL下标数组删除多余URL
 	for(var i=0;i<indexList.length;i++){delete targetURLList[indexList[i]]};
 	var indexList=[];
-	targetURLList.forEach((items)=>{indexList.push(items)});
+	targetURLList.forEach(function(items){indexList.push(items)});
 	targetURLList=indexList;
 }
 
