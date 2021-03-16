@@ -126,7 +126,7 @@ function drawText(canvasId, canvasW, canvasH, num, fsMin, fsMax, frMin, frMax, m
  */
 function drawBg(canvasId, canvasW, canvasH, min, max) {
 	// 绘制canvas背景
-	canvasId.fillStyle = ranColor(min, max);
+	canvasId.fillStyle = colorRGB2Hex(ranColor(min, max));
 	// 填充颜色
 	canvasId.fillRect(0, 0, canvasW, canvasH);
 }
