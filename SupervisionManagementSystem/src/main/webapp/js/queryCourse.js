@@ -66,7 +66,7 @@ function verifyUpdateAreaData(){
 	//vId,vName等为验证规范。
 	var vId=/^\d{10}$/;
 	var vName=/^.+$/;
-	var vNature=/^[(必修课)(公选课)(任选课)(实践课)(限选课)]?$/;
+	var vNature=/^.+$/;
 	var vType=/^(理论)|(实验)|(美术)|(体育)$/;
 	//正确标志
 	var flag=true;

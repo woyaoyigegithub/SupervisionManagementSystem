@@ -1,6 +1,18 @@
 var ctx,ctxW,ctxH;
 //var vcode;
 
+//rgb转换未16进制数
+function colorRGB2Hex(color) {
+    var rgb = color.split(',');
+    var r = parseInt(rgb[0].split('(')[1]);
+    var g = parseInt(rgb[1]);
+    var b = parseInt(rgb[2].split(')')[0]);
+ 
+    var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    return hex;
+ }
+
+
 /**
  * 产生一个随机数 可设置随机数区间
  * @param {[Number]}
@@ -74,7 +86,7 @@ function drawText(canvasId, canvasW, canvasH, num, fsMin, fsMax, frMin, frMax, m
 		var char = ranStr()[Math.floor(0, ranStr().length)];
 		var fs = ranNum(fsMin, fsMax);
 		canvasId.font = fs + "px Verdana";
-		canvasId.fillStyle = ranColor(min, max);
+		canvasId.fillStyle = colorRGB2Hex(ranColor(min, max));
 		// 保存绘制的状态
 		canvasId.save();
 		// context.translate(x,y);

@@ -38,10 +38,12 @@ function toggleItemsByOneMenuItemsClick(_this){
 	
 	//依据第一个菜单项的是否显示，来切换显示隐藏状态
 	if(itemsList.eq(0).css("display")==""||itemsList.eq(0).css("display")=="none" ){
-		itemsList.css("display","block");
+//		itemsList.css("display","block");
+		itemsList.show();
 		return;
 	}
-	itemsList.css("display","none");
+//	itemsList.css("display","none");
+	itemsList.hide();
 }
 
 
@@ -63,12 +65,15 @@ function toggleTwoMenuItemsByOneMenuItemsClick(_this){
 	twoMenuItemsList=itemsAndTwoMenuItemsList.filter(".twoMenuItems");
 	//隐藏两个一级菜单项之间的二级菜单项，显示其中的菜单项
 	if(twoMenuItemsList.eq(0).css("display")==""||twoMenuItemsList.eq(0).css("display")=="none"){
-		itemsAndTwoMenuItemsList.css("display","none");
-		twoMenuItemsList.css("display","block");
+//		itemsAndTwoMenuItemsList.css("display","none");
+//		twoMenuItemsList.css("display","block");
+		itemsAndTwoMenuItemsList.hide();
+		twoMenuItemsList.show();
 		return;
 	}
 	//隐藏两个一级菜单项之间的二级菜单项和菜单项
-	itemsAndTwoMenuItemsList.css("display","none");
+//	itemsAndTwoMenuItemsList.css("display","none");
+	itemsAndTwoMenuItemsList.hide();
 }
 
 
@@ -93,10 +98,12 @@ function toggleItemsByTwoMenuItemsClick(_this){
 	}
 	//显示或隐藏所选菜单项
 	if(itemsList.eq(0).css("display")==""||itemsList.eq(0).css("display")=="none"){
-		itemsList.css("display","block");
+//		itemsList.css("display","block");
+		itemsList.show();
 		return;
 	}
-	itemsList.css("display","none");
+//	itemsList.css("display","none");
+	itemsList.hide();
 }
 
 //根据身份删除导航栏结点和跳转URL(需要先初始化targetURLList)
@@ -173,14 +180,6 @@ $(document).ready(function(){
 	itemsList.each(function(index){
 		this.onclick=function(){
 			var targetURL=targetURLList[index];
-//			if(countURLList.indexOf(targetURL)>=0){
-//				if(identity=="管理员"){
-//					targetURL+="?adminId=";
-//				}else if(identity=="督导"){
-//					targetURL+="?supervisorId=";
-//				}
-//				targetURL+=staffId;
-//			}
 			infoManFrame.attr("src",targetURL);
 			return;
 		}
