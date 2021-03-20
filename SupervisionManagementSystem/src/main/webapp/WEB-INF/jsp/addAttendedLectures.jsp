@@ -63,9 +63,9 @@
 			<td class="essential">总分：</td><td colspan="2"><input type="number" name="totalScore"></td>
 			<td class="essential">评价等级：</td><td colspan="2"><input type="text" name="evaluationLevel"></td>	
 		</tr>
-		<tr><td colspan="2" class="essential">实验过程：</td><td colspan="4"><textarea name="experimentalProcess" placeholder="请输入实验过程" rows="5" cols="60"></textarea></td></tr>
-		<tr><td colspan="2" class="essential">值得肯定、学习、借鉴或推广的是：</td><td colspan="4"><textarea name="alrp" placeholder="请输入肯定、学习、借鉴或推广的内容" rows="5" cols="60"></textarea></td></tr>
-		<tr><td colspan="2" class="essential">值得商榷或改进的是：</td><td colspan="4"><textarea name="discussingOrImproving" placeholder="值得商榷或改进的地方" rows="5" cols="60"></textarea></td></tr>
+		<tr><td colspan="2" class="essential">实验过程：</td><td colspan="4"><textarea name="experimentalProcess" placeholder="请输入实验过程" rows="5" cols="${courseSelectionId==null?40:60}"></textarea></td></tr>
+		<tr><td colspan="2" class="essential">值得肯定、学习、借鉴或推广的是：</td><td colspan="4"><textarea name="alrp" placeholder="请输入肯定、学习、借鉴或推广的内容" rows="5" cols="${courseSelectionId==null?40:60}"></textarea></td></tr>
+		<tr><td colspan="2" class="essential">值得商榷或改进的是：</td><td colspan="4"><textarea name="discussingOrImproving" placeholder="值得商榷或改进的地方" rows="5" cols="${courseSelectionId==null?40:60}"></textarea></td></tr>
 		
 		<tr><td colspan="6"><input type="button" id="insertBtn" value="提交"><input type="button" id="clearBtn" value="清空"></td></tr>
 	</table>

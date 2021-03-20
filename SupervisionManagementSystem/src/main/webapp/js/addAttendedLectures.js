@@ -355,6 +355,11 @@ function finishLastInit(){
 			showTotalScoreAndEvaluationLevelWhenWritedAllScore();
 		});
 	});
+	
+	//增加输入字数
+	experimentalProcessTextarea.attr("cols",60);
+	alrpTextarea.attr("cols",60);
+	discussingOrImprovingTextarea.attr("cols",60);
 }
 
 
