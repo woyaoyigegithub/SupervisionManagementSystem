@@ -260,7 +260,7 @@ $(document).ready(function(){
 				initComponentStatus(true);
 				//发起获取听课项列表请求，并刷新网页
 				$.ajax("queryTeachingPlanInspectionItemsList",{type:"post",async:false,data:{type:courseSelection.course.type},
-					success:addTeachingPlanInspectionSituationListHtml,error:(xhr)=>alert(xhr.responseText)});
+					success:addTeachingPlanInspectionSituationListHtml,error:function(xhr){alert(xhr.responseText)}});
 			},
 			error: function(xhr){ alert(xhr.responseText); }
 		});
