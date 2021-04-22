@@ -3,7 +3,7 @@ var ctx,ctxW,ctxH;	//画布上下文，画布宽，画布高
 var veritifyCode;	//验证码
 
 //登录名框，密码框和验证码框
-var idInput,passwordInput,indentitySelect,vcodeInput;	
+var idInput,passwordInput,vcodeInput;	
 
 //绘制验证码
 function drawCanvas() {
@@ -16,7 +16,7 @@ function drawCanvas() {
 	// 绘制干扰线段
 	drawLine(ctx, ctxW, ctxH, 0, 0, 255);
 	// 绘制验证码
-	veritifyCode = drawText(ctx, ctxW, ctxH, 4, 10, 15, -20, 20, 0, 100);
+	veritifyCode = drawText(ctx, ctxW, ctxH, 4, 10, 15, -20, 20, 0, 100).toUpperCase();
 }
 
 //生成验证码
@@ -49,8 +49,7 @@ function login(){
 	
 	id=idInput.value;
 	password=passwordInput.value;
-	identity=identitySelect.value;
-	vcode=vcodeInput.value;
+	vcode=vcodeInput.value.toUpperCase();
 	
 	if(!vId.test(idInput.value)){ 
 		text+="教职工号错误\n"; 
@@ -69,7 +68,7 @@ function login(){
 		createVCode(); 
 		return; 
 	}
-	submitDataByForm("login",{id:id,password:password,identity:identity});
+	submitDataByForm("login",{id:id,password:password});
 }
 
 
@@ -77,7 +76,6 @@ $(document).ready(function(){
 	//初始化登录名框，密码框,身份框和验证码框
 	idInput=document.querySelector("input[name='id']");
 	passwordInput=document.querySelector("input[name='password']");
-	identitySelect=document.querySelector("select[name='identity']");
 	vcodeInput=document.querySelector("input[name='vcode']");
 	
 	//找到canvas控件绑定产生随机验证码

@@ -216,7 +216,7 @@ function drawCanvas() {
 	// 绘制干扰线段
 	drawLine(ctx, ctxW, ctxH, 0, 0, 255);
 	// 绘制验证码
-	var str = drawText(ctx, ctxW, ctxH, 4, 10, 15, -20, 20, 0, 100);
+	var str = drawText(ctx, ctxW, ctxH, 4, 10, 20, -20, 20, 0, 100);
 //	console.log(str);
 	return str;
 }

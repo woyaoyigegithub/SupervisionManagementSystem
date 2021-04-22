@@ -39,6 +39,11 @@ public class StaffServiceImpl implements StaffService {
 	}
 
 	@Override
+	public Staff findStaff(String id) {
+		return staffDao.selectStaffById(id);
+	}
+	
+	@Override
 	public void addStaff(Staff staff) {
 		staffDao.insertStaff(staff);
 	}
@@ -53,6 +58,8 @@ public class StaffServiceImpl implements StaffService {
 	public void removeStaff(String id) {
 		staffDao.deleteStaff(id);
 	}
+
+	
 	
 	
 }

@@ -9,6 +9,8 @@ public interface StaffService {
 
 	public List<Staff> findStaffList(Staff staff,PageModel pageModel);
 	
+	public Staff findStaff(String id);
+	
 	
 	public void addStaff(Staff staff);
 	

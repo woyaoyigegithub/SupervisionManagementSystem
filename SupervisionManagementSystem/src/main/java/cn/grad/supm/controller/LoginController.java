@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import cn.grad.supm.domain.Admin;
+import cn.grad.supm.domain.Staff;
 import cn.grad.supm.domain.Supervisor;
 import cn.grad.supm.service.AdminService;
+import cn.grad.supm.service.StaffService;
 import cn.grad.supm.service.SupervisorService;
 
 @Controller
 public class LoginController {
 	@Autowired
-	private SupervisorService supervisorService;
-	@Autowired
-	private AdminService adminService;
+	private StaffService staffService;
 
 	@RequestMapping("loginForm")
 	public String loginForm(){
@@ -30,37 +30,19 @@ public class LoginController {
 	
 	@RequestMapping("login")
 	public String login(
-			Model model,
-			HttpSession session,
-			@RequestParam("id")String id,
-			@RequestParam("password")String password,
-			@RequestParam("identity")String identity){
+		Model model,
+		HttpSession session,
+		@RequestParam("id")String id,
+		@RequestParam("password")String password){
 		
-		if(SUPERVISOR.equals(identity)) {
-			
-			Supervisor supervisor=supervisorService.findSupervisor(id);
-			if(supervisor==null || !password.equals(supervisor.getPassword())) {
-				model.addAttribute("errorMessage", "教职工号或密码错误");
-				return "loginForm";
-			}
-			session.setAttribute("staff", supervisor);
-			return "main";
-			
-		}else if(ADMIN.equals(identity)) {
-			
-			Admin admin=adminService.findAdmin(id);
-			if(admin==null || !password.equals(admin.getPassword())) {
-				model.addAttribute("errorMessage", "教职工号或密码错误");
-				return "loginForm";
-			}
-			session.setAttribute("staff", admin);
-			return "main";
-			
+		Staff staff=staffService.findStaff(id);
+		if(staff==null || !password.equals(staff.getPassword())) {
+			model.addAttribute("errorMessage", "教职工号或密码错误");
+			return "loginForm";
 		}
-		return "loginForm";
+		session.setAttribute("staff", staff);
+		return "main";
 	}
-	
-	
 	
 	@RequestMapping("loginout")
 	public String loginout(HttpSession session){
