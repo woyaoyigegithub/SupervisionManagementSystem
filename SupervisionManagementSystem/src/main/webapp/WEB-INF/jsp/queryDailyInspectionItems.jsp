@@ -52,7 +52,7 @@
 
 <!-- 更新区域 -->
 <div class="updateDataArea">
-	<h2>更新日常巡察项信息</h2>
+	<h2>更新日常巡查项信息</h2>
 	
 	<!-- 数据表格区域 -->
 	<table class="dataTab">

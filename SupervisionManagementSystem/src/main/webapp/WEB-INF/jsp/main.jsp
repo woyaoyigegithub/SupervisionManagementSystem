@@ -52,10 +52,10 @@
 		<li class="items admin">添加选课</li>
 		<li class="items">查询选课</li>
 		
-		<!-- 督察区域人员安排-->
-		<li class="oneMenuItems"><img src="images/circle.jpg">督察区域安排信息管理</li>
-		<li class="items admin">添加督察区域安排</li>
-		<li class="items">查询督察区域安排</li>
+		<!-- 督查区域人员安排-->
+		<li class="oneMenuItems"><img src="images/circle.jpg">督查区域安排信息管理</li>
+		<li class="items admin">添加督查区域安排</li>
+		<li class="items">查询督查区域安排</li>
 
 		<!-- 听课-->
 		<li class="oneMenuItems"><img src="images/circle.jpg">听课信息管理</li>

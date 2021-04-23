@@ -113,7 +113,7 @@
 	<table class="dataTab">
 		<tr>
 			<td class="essential">日常巡查编号：</td><td><input type="number" name="id"></td>
-			<td class="essential">督察区域人员安排编号：</td><td><input name="inspectionAreaArrangementSituationId"/></td>
+			<td class="essential">督查区域人员安排编号：</td><td><input name="inspectionAreaArrangementSituationId"/></td>
 			<td class="essential">周次：</td><td><input type="number" name="weekly" min="0"></td>
 			<td class="essential">星期：</td><td><select name="week"><option value=""></option>
 				<option value="一">一</option><option value="一">一</option><option value="二">二</option><option value="三">三</option>

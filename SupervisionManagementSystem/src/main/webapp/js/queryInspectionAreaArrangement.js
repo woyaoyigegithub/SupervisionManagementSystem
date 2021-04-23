@@ -78,7 +78,7 @@ function verifyUpdateAreaData(){
 	uInspectorsNumInputList.each(function(index){
 		var uInspectorsNumInput=uInspectorsNumInputList.eq(index);
 		if(!vInspectorsNum.test(uInspectorsNumInput.val())){
-			text+=(index+1)+".督察人数为空\n";
+			text+=(index+1)+".督查人数为空\n";
 			flag=false;
 		}
 	});

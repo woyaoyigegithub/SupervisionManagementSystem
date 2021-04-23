@@ -21,7 +21,7 @@
 	<table class="dataTab">
 		<tr><td class="essential">选课课号：</td><td><input type="text" name="id" placeholder="(2020-2021-1)-0010000001-0000558-1" min="0"></td><td class="errors"></td></tr>
 		<tr><td class="essential">课程编号：</td><td><input type="number" name="courseId" placeholder="0010000001" min="0"></td><td class="errors"></td></tr>
-		<tr><td class="essential">授课教师工号：</td><td><input type="number" name="teacherId" placeholder="0000558" min="0"></td><td class="errors"></td></tr>
+		<tr><td class="essential">授课教师工号：</td><td><input type="number" name="teacherId" placeholder="1010100" min="0"></td><td class="errors"></td></tr>
 		<tr><td>选课班级编号：</td><td><input type="number" name="classId" placeholder="2017010101" min="0"></td><td class="errors"></td></tr>
 		<tr><td class="essential">开课学院：</td><td><select name="department"><option value=""></option>
 			<c:forEach items="${departmentList}" var="department"><option value="${department}">${department}</option></c:forEach></select></td>

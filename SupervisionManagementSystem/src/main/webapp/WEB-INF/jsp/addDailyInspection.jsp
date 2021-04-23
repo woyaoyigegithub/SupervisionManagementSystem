@@ -17,17 +17,17 @@
 <div class="insertDataArea">
 	<h2>添加日常巡查信息</h2>
 	
-	<!-- 无督察区域安排 -->
+	<!-- 无督查区域安排 -->
 	<c:if test="${staff.power.name=='督导' && fn:length(inspectionAreaArrangementSituationIdList)==0}">
 		<h3>今天没有日常巡查任务！</h3>
 	</c:if>
 	
-	<!-- 有至少一条督察区域安排 -->
+	<!-- 有至少一条督查区域安排 -->
 	<c:if test="${!(staff.power.name=='督导' && fn:length(inspectionAreaArrangementSituationIdList)==0)}">
 		<!-- 数据表格 -->
 		<table class="dataTab">
 			<tr>
-				<td class="essential">督察区域人员安排编号：</td><td><select name="inspectionAreaArrangementSituationId"><option value=""></option>
+				<td class="essential">督查区域人员安排编号：</td><td><select name="inspectionAreaArrangementSituationId"><option value=""></option>
 					<c:forEach items="${inspectionAreaArrangementSituationIdList}" var="inspectionAreaArrangementSituationId">
 					<c:choose><c:when test="${inspectionAreaArrangementSituationId==selectedInspectionAreaArrangementSituationId}">
 						<option selected>${inspectionAreaArrangementSituationId}</option></c:when>

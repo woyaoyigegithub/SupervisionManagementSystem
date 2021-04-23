@@ -148,7 +148,7 @@ h1,h2,h3 {
 	width: 250px;
 }
 
-/*督察区域<input>样式*/
+/*督查区域<input>样式*/
 .insertDataArea>.dataTab input[name='tourInspectionArea'],
 .queryDataArea .dataTab input[name='tourInspectionArea'],
 .updateDataArea>.dataTab input[name='tourInspectionArea'] {

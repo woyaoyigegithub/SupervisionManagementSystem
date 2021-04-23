@@ -43,7 +43,7 @@
 					</tr>
 				</c:if>
 				<c:if test="${vs0.index!=0}"><tr></c:if>
-				<td colspan="2"><input type="text" name="supervisorId" placeholder="0000077"></td>
+				<td colspan="2"><input type="text" name="supervisorId" placeholder="0000325"></td>
 				<td><select name="week"><option value=""></option>
 					<option value="周一">周一</option><option value="周二">周二</option><option value="周三">周三</option><option value="周四">周四</option>
 					<option value="周五">周五</option><option value="周六">周六</option><option value="周日">周日</option></select></td>

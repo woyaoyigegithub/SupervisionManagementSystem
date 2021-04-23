@@ -273,7 +273,7 @@ $(document).ready(function(){
 		dateInput.attr("disabled",true);
 	}
 	
-	//如果是从督察区域安排表超链接点击过来，则禁用督察区域人员安排编号控件
+	//如果是从督查区域安排表超链接点击过来，则禁用督查区域人员安排编号控件
 	if(inspectionAreaArrangementSituationIdSelect.val()!=""){ inspectionAreaArrangementSituationIdSelect.attr("disabled",true); }
 	
 	//test数据

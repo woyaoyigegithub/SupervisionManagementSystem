@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>查询巡查区域人员安排信息</title>
+<title>查询督查区域人员安排信息</title>
 <link rel="stylesheet" type="text/css" href="css/css.css">
 <link rel="stylesheet" type="text/css" href="css/inspectionAreaArrangement.css">
 <link rel="stylesheet" type="text/css" href="css/pager.css">
@@ -19,7 +19,7 @@
 
 <!-- 查询区域 -->
 <div class="queryDataArea">
-	<h2>查询巡查区域人员安排信息</h2>
+	<h2>查询督查区域人员安排信息</h2>
 	
 	<!-- 高级搜索区域 -->
 	<div>
@@ -37,7 +37,7 @@
 	</div>
 	
 	<c:choose>
-		<c:when test="${fn:length(inspectionAreaArrangementList)==0 }"><h3>无督察区域安排记录</h3></c:when>
+		<c:when test="${fn:length(inspectionAreaArrangementList)==0 }"><h3>无督查区域安排记录</h3></c:when>
 	
 		<c:otherwise>
 			<!-- 数据表格 -->
@@ -93,7 +93,7 @@
 
 <!-- 更新区域 -->
 <div class="updateDataArea">
-	<h2>更新督察区域安排信息</h2>
+	<h2>更新督查区域安排信息</h2>
 	
 	<!-- 数据表格区域 -->
 	<table class="dataTab">
@@ -107,8 +107,8 @@
 			<td>公布日期：</td><td><input type="date" name="publicationTime"></td>
 		</tr>
 		<tr>
-			<td class="essential">督察区域教学楼编号</td><td colspan="2" class="essential">教学楼</td>
-			<td class="essential">督导人数</td><td colspan="2">督察区域人员安排编号</td><td colspan="2" class="essential">督导工号</td><td>星期</td><td>早中晚</td>
+			<td class="essential">督查区域教学楼编号</td><td colspan="2" class="essential">教学楼</td>
+			<td class="essential">督导人数</td><td colspan="2">督查区域人员安排编号</td><td colspan="2" class="essential">督导工号</td><td>星期</td><td>早中晚</td>
 		</tr>
 		
 		

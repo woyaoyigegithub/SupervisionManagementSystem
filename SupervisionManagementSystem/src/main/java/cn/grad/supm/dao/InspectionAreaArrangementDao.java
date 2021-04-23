@@ -66,7 +66,7 @@ public interface InspectionAreaArrangementDao {
 	public int count(Map<String,Object> params);
 	
 	
-	//查询最新的督察区域安排记录
+	//查询最新的督查区域安排记录
 	@Select("SELECT * FROM "+INSPECTION_AREA_ARRANGEMENT+" WHERE id=(SELECT MAX(id) FROM "+INSPECTION_AREA_ARRANGEMENT+")")
 	@ResultMap("inspectionAreaArrangementMap")
 	public InspectionAreaArrangement selectLastInspectionAreaArrangement();

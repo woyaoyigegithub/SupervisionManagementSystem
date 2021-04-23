@@ -39,7 +39,7 @@ public class HelperImpl implements Helper {
 	}
 
 	
-	//从最新的督察区域安排中查询今天督导的编号列表
+	//从最新的督查区域安排中查询今天督导的编号列表
 	@Override
 	public List<Integer> findInspectionAreaArrangementSituationIdList(Staff staff) {
 		String staffId=staff.getId();

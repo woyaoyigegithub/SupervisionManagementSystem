@@ -62,7 +62,7 @@ function verifyData(){
 	inspectorsNumInputList.each(function(index){
 		var inspectorsNumInput=inspectorsNumInputList.eq(index);
 		if(!vInspectorsNum.test(inspectorsNumInput.val())){
-			text+=(index+1)+".督察人数为空\n";
+			text+=(index+1)+".督查人数为空\n";
 			flag=false;
 		}
 	});

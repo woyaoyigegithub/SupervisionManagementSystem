@@ -112,7 +112,7 @@ public class DailyInspectionController {
 	@RequestMapping("addDailyInspection")
 	public String addDailyInspection(Model model,@SessionAttribute("staff")Staff staff,
 			@RequestParam(defaultValue = "0",value = "inspectionAreaArrangementSituationId")int inspectionAreaArrangementSituationId) {
-		//如果是从督察区域安排表的超链接过来的，则放置将被选中的督察区域人员安排编号
+		//如果是从督查区域安排表的超链接过来的，则放置将被选中的督查区域人员安排编号
 		if(inspectionAreaArrangementSituationId!=0) {
 			model.addAttribute("selectedInspectionAreaArrangementSituationId", inspectionAreaArrangementSituationId);
 		}
