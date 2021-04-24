@@ -80,6 +80,7 @@
 		<tr><td class="essential">备注：</td><td><textarea name="remarks" rows="3" cols="30"></textarea></td><td class="errors"></td></tr>
 		<tr><td colspan="2"><input type="button" id="updateBtn" value="修改"><input type="button" id="cancelBtn" value="取消"></td></tr>
 	</table>
+	<p class="errorMessage"></p>
 </div>
 
 </body>

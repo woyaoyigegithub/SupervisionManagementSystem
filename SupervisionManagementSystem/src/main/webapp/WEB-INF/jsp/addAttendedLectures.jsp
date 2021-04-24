@@ -32,20 +32,20 @@
 			<td class="essential">督导工号：</td><td colspan="2"><input type="number" name="supervisorId" placeholder="0000325"></td>
 		</tr>
 		<tr><!-- 跟踪听课', '讲课比赛', '新进教师', '随机听课', '其他 -->
-			<td class="essential">教学章节：</td><td colspan="2"><input type="text" name="teachingSection" placeholder="第三章第1节"></td>
-			<td class="essential">上课班级：</td><td colspan="2"><input type="text" name="clazzId" placeholder="2017010119"></td>
+			<td class="essential">教学章节：</td><td colspan="2"><input type="text" name="teachingSection"></td>
+			<td class="essential">上课班级：</td><td colspan="2"><input type="text" name="clazzId" value="${clazzId}"></td>
 		</tr>
 		<tr>
-			<td class="essential">学生出勤：</td><td colspan="2">应到<input type="number" name="numOfClass" min="0">人,
+			<td class="essential">学生出勤：</td><td colspan="2">应到<input type="number" name="numOfClass" min="0" value="${numOfClass}">人,
 				实到<input type="number" name="actualNum" placeholder="" min="0">人<br>
 				迟到<input type="number" name="lateNum" min="0">人,
 				早退<input type="number" name="leavingEarlyNum" min="0">人</td>
 			<td class="essential">听课日期：</td>
 			<td colspan="2">
-				日期：<input type="date" name="date"><br>第<input type="number" name="weekly" placeholder="3" min="1" max="30">周,
+				日期：<input type="date" name="date"><br>第<input type="number" name="weekly" min="1" max="30">周,
 				星期<select name="week"><option value=""></option><option>一</option><option>二</option>
 				<option>三</option><option>四</option><option>五</option><option>六</option><option>日</option></select>,
-				第<input type="text" name="jieci" placeholder="1-2" maxlength="4">节
+				第<input type="text" name="jieci" maxlength="4">节
 			</td>
 		</tr>
 		

@@ -158,6 +158,8 @@ public class AttendedLecturesController {
 				List<Integer> itemsIdList=Utils.getAttendedLecturesItemsIdList(type);
 				List<AttendedLecturesItems> attendedLecturesItemList=tableItemsListService.findAttendedLecturesItemsList(itemsIdList);
 				model.addAttribute("courseSelectionId", courseSelectionId);
+				if(courseSelection.getClazz()!=null) { model.addAttribute("clazzId",courseSelection.getClazz().getId()); }
+				model.addAttribute("numOfClass", courseSelection.getNumOfClass());
 				model.addAttribute("attendedLecturesItemsList", attendedLecturesItemList);
 			}
 		}

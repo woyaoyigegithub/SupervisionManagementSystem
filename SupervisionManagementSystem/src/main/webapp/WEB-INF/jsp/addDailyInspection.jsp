@@ -34,7 +34,7 @@
 						<c:otherwise><option>${inspectionAreaArrangementSituationId}</option></c:otherwise></c:choose></c:forEach></select></td>
 				<td class="essential">周次：</td><td><input type="number" name="weekly" placeholder="5" min="0"></td>
 				<td class="essential">星期：</td><td><select name="week"><option value=""></option>
-				<option value="一">一</option><option value="一">一</option><option value="二">二</option><option value="三">三</option>
+				<option value="一">一</option><option value="二">二</option><option value="三">三</option>
 				<option value="四">四</option><option value="五">五</option><option value="六">六</option><option value="日">日</option>
 				</select></td>
 				<td class="essential">巡查日期：</td><td><input type="date" name="date"></td><td class="errors"></td>

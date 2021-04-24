@@ -265,13 +265,13 @@ function initComponentsState(flag){
 		clearBtn.attr("disabled",true);
 		return;
 	}
-	//初始化成功时，除选课编号，读到工号，应到人数，日期，星期，总分和评价等级外，其余输入框状态均为正常输入状态
+	//初始化成功时，除选课编号，督导工号，应到人数，日期，星期，总分和评价等级外，其余输入框状态均为正常输入状态
 	courseSelectionIdInput.attr("disabled",true);
 	queryCourseSelectionBtn.hide();
 	typeSelect.attr("disabled",false);
 	if(getIdentity()=="管理员"){ supervisorIdInput.attr("disabled",false); }else{ supervisorIdInput.attr("disabled",true); }
 	teachingSectionInput.attr("disabled",false);
-	clazzIdInput.attr("disabled",false);
+	if(clazzIdInput.val()!=""){ clazzIdInput.attr("disabled",true); }else{ clazzIdInput.attr("disabled",false); }
 	numOfClassInput.attr("disabled",true);
 	actualNumInput.attr("disabled",false);
 	lateNumInput.attr("disabled",false);
@@ -514,7 +514,7 @@ $(document).ready(function(){
 	
 	//如果没有选课id的值（没有从查询选课页面的超链接点击过来，而是直接点击的导航栏），则提示输入选课编号
 	if(courseSelectionIdInput.val()==""){ tryGetCourseSelectionIdByInquire(); }
-	else { 
+	else {
 		initComponentsState(true);
 		//初始化评价分数和备注控件列表、注册添加、删除控件点击事件
 		finishLastInit();

@@ -17,11 +17,13 @@ var queryDataTab,updateDataTab;
 //指的是类名advancedSearch区域中的input。
 var aIdInput,aCourseSelectionIdInput;
 //指的是类名updateArea区域中的input。
-var uIdInput,uCourseSelectionIdInput,uAssignmentsOrReportsFenNumSelect,uAssignmentsOrReportsCiNumInput,
+var uIdInput,uCourseSelectionIdInput,uAssignmentsOrReportsFenNumInput,uAssignmentsOrReportsCiNumInput,
 uCorrectionTimesInput,uSeriousCorrectionInput,uMoreSeriousCorrectionInput,uGeneralCorrectionInput,uPoorCorrectionInput,uRemarksTextarea;
 //指的是类名为updateArea区域中的error td标签
 var idErrorTd,courseSelectionIdErrorTd,assignmentsOrReportsFenNumErrorTd,assignmentsOrReportsCiNumErrorTd,
 correctionTimesErrorTd,seriousCorrectionErrorTd,moreSeriousCorrectionErrorTd,generalCorrectionErrorTd,poorCorrectionErrorTd,remarksErrorTd;
+//错误消息标签
+var errorMessageP;
 //搜索、批量删除button和全选单选框
 var searchBtn,batchDeleteBtn,selectAllChk;
 //数据表格中的所有更新、删除图片列表
@@ -181,7 +183,7 @@ function submitUpdateAreaData(){
 			remarks:remarks
         }),
         success: function (data) {
-            if(data!=true){ return; }
+            if(data!=true){ alert(data); errorMessageP.text(data); return; }
             location.href="queryHomeworkInspection";
         },
         error: function (xhr) {
@@ -197,7 +199,7 @@ function submitUpdateAreaData(){
 function clearUpdateAreaData(){
 	uIdInput.val("");
 	uCourseSelectionIdInput.val("");
-	uAssignmentsOrReportsFenNumSelect.val("");
+	uAssignmentsOrReportsFenNumInput.val("");
 	uAssignmentsOrReportsCiNumInput.val("");
 	uCorrectionTimesInput.val("");
 	uSeriousCorrectionInput.val("");
@@ -232,7 +234,7 @@ $(document).ready(function(){
 	uRemarksTextarea=updateDataTab.find("textarea[name='remarks']");
 	
 	idErrorTd=$(".errors").eq(0);
-	nameErrorTd=$(".errors").eq(1);
+	courseSelectionIdErrorTd=$(".errors").eq(1);
 	assignmentsOrReportsFenNumErrorTd=$(".errors").eq(2);
 	assignmentsOrReportsCiNumErrorTd=$(".errors").eq(3);
 	correctionTimesErrorTd=$(".errors").eq(4);
@@ -241,6 +243,8 @@ $(document).ready(function(){
 	generalCorrectionErrorTd=$(".errors").eq(7);
 	poorCorrectionErrorTd=$(".errors").eq(8);
 	remarksErrorTd=$(".errors").eq(9);
+	
+	errorMessageP=updateDataArea.find(".errorMessage");
 
 	batchDeleteBtn=$("#batchDeleteBtn");
 	searchBtn=$("#searchBtn");
