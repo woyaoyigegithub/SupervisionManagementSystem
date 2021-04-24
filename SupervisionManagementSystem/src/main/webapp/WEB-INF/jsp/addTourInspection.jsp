@@ -25,10 +25,10 @@
 		</tr>
 		<tr>
 			<td><input type="date" name="date"></td>
-			<td><input type="number" name="startingTime" placeholder="10" min="0"></td>
-			<td><input type="number" name="endingTime" placeholder="12" min="0"></td>
-			<td><input type="text" name="tourInspectionArea" placeholder="慎思5栋、6栋"></input></td>
-			<td><input type="number" name="supervisorId" placeholder="1010100" min="0"></td>
+			<td><input type="number" name="startingTime" min="0"></td>
+			<td><input type="number" name="endingTime" min="0"></td>
+			<td><input type="text" name="tourInspectionArea"></input></td>
+			<td><input type="number" name="supervisorId" min="0"></td>
 		</tr>
 		
 		<tr>

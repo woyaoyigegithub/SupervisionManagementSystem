@@ -24,9 +24,9 @@
 			<td colspan="2">备注</td>
 		</tr>
 		<tr>
-			<td><input type="number" name="studentId" placeholder="201706084101" min="0"></td>
-			<td><input type="number" name="instructorId" placeholder="1010100" min="0"></td>
-			<td><input type="number" name="consultTeacherId" placeholder="0000325" min="0"></td>
+			<td><input type="number" name="studentId" min="0"></td>
+			<td><input type="number" name="instructorId" min="0"></td>
+			<td><input type="number" name="consultTeacherId" min="0"></td>
 			<td colspan="2"><textarea name="remarks" placeholder="写点备注" rows="3" cols="40"></textarea></td>
 		</tr>
 		
