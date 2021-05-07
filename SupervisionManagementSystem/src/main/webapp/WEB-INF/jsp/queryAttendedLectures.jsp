@@ -143,9 +143,9 @@
 			<td class="essential">总分：</td><td colspan="2"><input type="number" name="totalScore" disabled></td>
 			<td class="essential">评价等级：</td><td colspan="2"><input type="text" name="evaluationLevel" disabled></td>	
 		</tr>
-		<tr><td colspan="2" class="essential">实验过程：</td><td colspan="4"><textarea name="experimentalProcess" rows="5" cols="70"></textarea></td></tr>
-		<tr><td colspan="2" class="essential">值得肯定、学习、借鉴或推广的是：</td><td colspan="4"><textarea name="alrp" rows="5" cols="70"></textarea></td></tr>
-		<tr><td colspan="2" class="essential">值得商榷或改进的是：</td><td colspan="4"><textarea name="discussingOrImproving" rows="5" cols="70"></textarea></td></tr>
+		<tr><td colspan="2" class="essential">实验过程：</td><td colspan="4"><textarea name="experimentalProcess" rows="5" cols="65"></textarea></td></tr>
+		<tr><td colspan="2" class="essential">值得肯定、学习、借鉴或推广的是：</td><td colspan="4"><textarea name="alrp" rows="5" cols="65"></textarea></td></tr>
+		<tr><td colspan="2" class="essential">值得商榷或改进的是：</td><td colspan="4"><textarea name="discussingOrImproving" rows="5" cols="65"></textarea></td></tr>
 		
 		<tr><td colspan="6"><input type="button" id="updateBtn" value="更新"><input type="button" id="cancelBtn" value="取消"></td></tr>
 	</table>
